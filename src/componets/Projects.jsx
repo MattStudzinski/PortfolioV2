@@ -10,7 +10,7 @@ const Projects = () => {
             <div className='projects__card-container'>
 
 
-            <Tilt className="Tilt" options= {{ max: 10, scale: 1.03}}>
+            <Tilt className="Tilt" options= {{ max: 20, scale: 1.03}}>
                 <article className='projects__card'>
                     <div className='projects__header-container'>
                     <h1 className='projects__title'>Inventory Turner</h1>
@@ -31,7 +31,7 @@ const Projects = () => {
             </Tilt>
 
 
-            <Tilt className="Tilt" options= {{ max: 10, scale: 1.03}}>
+            <Tilt className="Tilt" options= {{ max: 20, scale: 1.03}}>
                 <article className='projects__card'>
                     <div className='projects__header-container'>
                     <h1 className='projects__title'>Inventory Turner</h1>
@@ -59,7 +59,7 @@ const Projects = () => {
             <div className='projects__card-container2'>
 
 
-            <Tilt className="Tilt" options= {{ max: 10, scale: 1.03}}>
+            <Tilt className="Tilt" options= {{ max: 20, scale: 1.03}}>
                 <article className='projects__card'>
                     <div className='projects__header-container'>
                     <h1 className='projects__title'>Inventory Turner</h1>
@@ -79,7 +79,7 @@ const Projects = () => {
                 </article>
             </Tilt>
 
-            <Tilt className="Tilt" options= {{ max: 10, scale: 1.03}}>
+            <Tilt className="Tilt" options= {{ max: 20, scale: 1.03}}>
                 <article className='projects__card'>
                     <div className='projects__header-container'>
                     <h1 className='projects__title'>Inventory Turner</h1>

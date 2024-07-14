@@ -159,10 +159,12 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(0.1rem);
-  -webkit-backdrop-filter: blur(1px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 22px 0 rgba(170, 171, 188, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .projects__header-container {
   display: flex;
@@ -237,6 +239,10 @@ html {
   align-items: center;
   margin-top: 18rem;
   gap: 3rem;
+}
+
+.Tilt {
+  transition: transform 0.5s ease-out;
 }
 
 #stars {
