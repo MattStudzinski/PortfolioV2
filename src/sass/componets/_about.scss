@@ -1,0 +1,106 @@
+.about{
+    display: flex;
+    color: $text;
+    width: 75%;
+    height: 60rem;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__name{
+        font-size: 5rem;
+    }
+
+    &__title {
+        display: flex;
+        font-size: 4.5rem;
+    }
+
+    &__role {
+        color: $primary;
+        font-size: 4.5rem;
+    }
+
+    &__navigation {
+        margin: 1rem 0 0 2rem;
+        display: flex;
+        width: 50%;
+        gap: 3rem;
+    }
+
+    &__navigation-link {
+        color: $primary;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        border: solid $primary 4px;
+        font-size: 1.7rem;
+        border-radius: .25em;
+        padding: .25em 1em;
+
+        text-shadow:
+        0 0 0.125em hsl(0 0% 100% / .3),
+        0 0 0.25em currentColor;
+        
+        box-shadow: 0 0 1em 0 $primary,
+        inset 0 0 1em 0 $primary
+        ;
+        position: relative;
+        
+
+
+        &:before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            background-color: $primary;
+            top: 120%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(1em) rotateX( 30deg ) scale(1, 0.35);
+            filter: blur(1.2em);
+            opacity: .4;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 100ms linear;
+            background-color: $primary;
+            z-index: -1;
+            box-shadow: 0 0 1em .5em $primary;
+        }
+
+        &:hover,
+        :focus {
+            background-color: $primary;
+            color: $text-dark;
+            text-shadow: none;
+        }
+
+        &:hover::before,
+        :focus::before {
+            opacity: 1;
+        }
+        &:hover::after,
+        :focus::after {
+            opacity: 1;
+        }
+
+        
+    }
+
+
+
+}

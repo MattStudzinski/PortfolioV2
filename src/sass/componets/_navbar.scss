@@ -1,0 +1,18 @@
+.nav-bar {
+    width: 100%;
+    color: $text;
+    justify-content: flex-end;
+    display: flex;
+    padding-right: 5rem;
+    margin-top: 3rem;
+    
+
+    &__links {
+        display: flex;
+        gap: 3rem;
+    }
+
+    &__link-item {
+        color: $primary;
+    }
+}

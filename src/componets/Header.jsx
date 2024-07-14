@@ -1,10 +1,13 @@
-import React from 'react';
+import About from "./About";
+import Navbar from "./Navbar";
+
 
 const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <section className='header'>
+            <Navbar />
+            <About />
+        </section>
     );
 };
 
