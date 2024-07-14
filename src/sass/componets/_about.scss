@@ -2,9 +2,10 @@
     display: flex;
     color: $text;
     width: 75%;
-    height: 60rem;
+    height: 74rem;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15rem;
 
     &__container {
         display: flex;
@@ -24,6 +25,12 @@
     &__role {
         color: $primary;
         font-size: 4.5rem;
+    }
+
+    &__bio {
+        width: 71rem;
+        margin-bottom: 2rem;
+        font-size: 1.4rem;
     }
 
     &__navigation {
