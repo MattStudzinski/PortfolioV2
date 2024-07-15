@@ -71,8 +71,8 @@
   width: 15rem;
 }
 .asteroid3__overlay3 {
-  width: 104px;
-  height: 104px;
+  width: 114px;
+  height: 114px;
   position: absolute;
   position: absolute;
   top: 50%;
@@ -104,6 +104,29 @@
   background: rgba(66, 66, 66, 0.784);
   padding: 0.3rem;
   border-radius: 15rem;
+}
+
+.skills {
+  height: 50rem;
+  width: 100%;
+}
+.skills__container {
+  height: 50rem;
+  width: 100%;
+  overflow: hidden;
+}
+.skills__asteroid-container {
+  position: relative;
+  width: 100%; /* Ensure full width within the parallax container */
+  height: 50rem;
+}
+.skills__asteroid {
+  position: absolute;
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  top: 50%; /* Adjust starting position */
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 body {
