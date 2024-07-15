@@ -1,11 +1,14 @@
+@import "base/animations";
 @import "abstracts/variables";
+@import "abstracts/asteroids";
 @import "base/base";
 @import "componets/about";
 @import "componets/navbar";
 @import "componets/experience";
 @import "componets/projects";
+@import "componets/skills";
 @import "abstracts/stars";
-@import "base/animations";
+
 
 .icon{
     height: 2.5rem;

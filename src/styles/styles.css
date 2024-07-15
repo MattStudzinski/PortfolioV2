@@ -1,3 +1,111 @@
+@keyframes animStar {
+  from {
+    transform: translateY(0rem);
+  }
+  to {
+    transform: translateY(-200rem);
+  }
+}
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+.asteroid {
+  position: relative;
+  height: 11rem;
+  width: 11rem;
+}
+.asteroid__asteroid {
+  position: relative;
+  height: 11rem;
+  width: 11rem;
+}
+.asteroid__overlay {
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(66, 66, 66, 0.784);
+  padding: 0.3rem;
+  border-radius: 15rem;
+}
+
+.asteroid2 {
+  position: relative;
+  height: 9rem;
+  width: 9rem;
+}
+.asteroid2__asteroid2 {
+  position: relative;
+  height: 9rem;
+  width: 9rem;
+}
+.asteroid2__overlay2 {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(66, 66, 66, 0.784);
+  padding: 0.3rem;
+  border-radius: 15rem;
+}
+
+.asteroid3 {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+}
+.asteroid3__asteroid3 {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+}
+.asteroid3__overlay3 {
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(66, 66, 66, 0.784);
+  padding: 0.3rem;
+  border-radius: 15rem;
+}
+
+.asteroid4 {
+  position: relative;
+  height: 12rem;
+  width: 12rem;
+}
+.asteroid4__asteroid4 {
+  position: relative;
+  height: 12rem;
+  width: 12rem;
+}
+.asteroid4__overlay4 {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(66, 66, 66, 0.784);
+  padding: 0.3rem;
+  border-radius: 15rem;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -141,18 +249,16 @@ html {
 
 .projects {
   display: flex;
-  height: 80rem;
+  height: 120rem;
   width: 100%;
   justify-content: center;
-  align-items: center;
   gap: 3rem;
 }
 .projects__card-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 37%;
-  align-items: center;
+  width: 30%;
   gap: 3rem;
 }
 .projects__card {
@@ -196,6 +302,7 @@ html {
   width: 7rem;
   padding: 0.3rem;
   border-radius: 5rem;
+  color: rgb(255, 255, 255);
 }
 .projects #tech-css {
   background-color: #264de4;
@@ -228,17 +335,90 @@ html {
   display: flex;
   height: 7rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
-  gap: 5rem;
+}
+.projects__live-button {
+  position: relative;
+  width: 12.1rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0.3rem 1rem;
+  z-index: 1;
+  overflow: hidden;
+  transition: 1s;
+}
+.projects__live-button:hover {
+  border: 2px solid rgb(143, 0, 255);
+  box-shadow: 0 0 1.8rem rgb(143, 0, 255);
+}
+.projects__live-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18%;
+  width: 0;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: -1;
+  transform: skewX(35deg);
+  transition: 1s;
+}
+.projects__live-button:hover:before {
+  width: 100%;
+  background: rgb(143, 0, 255);
+}
+.projects__code-button {
+  position: relative;
+  width: 12.1rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0.3rem 1rem;
+  z-index: 1;
+  overflow: hidden;
+  transition: 1s;
+}
+.projects__code-button:hover {
+  border: 2px solid rgb(40, 40, 40);
+  box-shadow: 0 0 1.8rem rgb(40, 40, 40);
+}
+.projects__code-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18%;
+  width: 0;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  z-index: -1;
+  transform: skewX(35deg);
+  transition: 1s;
+}
+.projects__code-button:hover:before {
+  width: 100%;
+  background: rgb(40, 40, 40);
 }
 .projects__card-container2 {
   display: flex;
   flex-direction: column;
-  width: 37%;
-  align-items: center;
-  margin-top: 18rem;
   gap: 3rem;
+  width: 30%;
+  gap: 3rem;
+  margin-top: 10rem;
 }
 
 .Tilt {
@@ -296,14 +476,6 @@ html {
   box-shadow: 387px 1878px rgb(143, 0, 255), 760px 1564px rgb(143, 0, 255), 1487px 999px rgb(143, 0, 255), 948px 1828px rgb(143, 0, 255), 1977px 1001px rgb(143, 0, 255), 1284px 1963px rgb(143, 0, 255), 656px 284px rgb(143, 0, 255), 1268px 1635px rgb(143, 0, 255), 1820px 598px rgb(143, 0, 255), 642px 1900px rgb(143, 0, 255), 296px 57px rgb(143, 0, 255), 921px 1620px rgb(143, 0, 255), 476px 1858px rgb(143, 0, 255), 658px 613px rgb(143, 0, 255), 1171px 1363px rgb(143, 0, 255), 1419px 283px rgb(143, 0, 255), 1037px 731px rgb(143, 0, 255), 503px 663px rgb(143, 0, 255), 1562px 463px rgb(143, 0, 255), 383px 1197px rgb(143, 0, 255), 1171px 1233px rgb(143, 0, 255), 876px 1768px rgb(143, 0, 255), 856px 1615px rgb(143, 0, 255), 1375px 1924px rgb(143, 0, 255), 1725px 918px rgb(143, 0, 255), 952px 119px rgb(143, 0, 255), 768px 1212px rgb(143, 0, 255), 992px 1462px rgb(143, 0, 255), 1929px 717px rgb(143, 0, 255), 1947px 755px rgb(143, 0, 255), 1818px 1123px rgb(143, 0, 255), 1896px 1672px rgb(143, 0, 255), 460px 198px rgb(143, 0, 255), 256px 271px rgb(143, 0, 255), 752px 544px rgb(143, 0, 255), 1222px 1859px rgb(143, 0, 255), 1851px 443px rgb(143, 0, 255), 313px 1858px rgb(143, 0, 255), 709px 446px rgb(143, 0, 255), 1546px 697px rgb(143, 0, 255), 674px 1155px rgb(143, 0, 255), 1112px 130px rgb(143, 0, 255), 355px 1790px rgb(143, 0, 255), 1496px 974px rgb(143, 0, 255), 1696px 480px rgb(143, 0, 255), 1316px 1265px rgb(143, 0, 255), 1645px 1063px rgb(143, 0, 255), 1182px 237px rgb(143, 0, 255), 427px 1582px rgb(143, 0, 255), 859px 253px rgb(143, 0, 255), 458px 939px rgb(143, 0, 255), 1517px 1644px rgb(143, 0, 255), 1943px 60px rgb(143, 0, 255), 212px 1650px rgb(143, 0, 255), 966px 1786px rgb(143, 0, 255), 473px 712px rgb(143, 0, 255), 130px 76px rgb(143, 0, 255), 1417px 1186px rgb(143, 0, 255), 909px 1580px rgb(143, 0, 255), 1913px 762px rgb(143, 0, 255), 204px 1143px rgb(143, 0, 255), 1998px 1057px rgb(143, 0, 255), 1468px 1301px rgb(143, 0, 255), 144px 1676px rgb(143, 0, 255), 21px 1601px rgb(143, 0, 255), 382px 1362px rgb(143, 0, 255), 912px 753px rgb(143, 0, 255), 1488px 1405px rgb(143, 0, 255), 802px 156px rgb(143, 0, 255), 174px 550px rgb(143, 0, 255), 338px 1366px rgb(143, 0, 255), 1197px 774px rgb(143, 0, 255), 602px 486px rgb(143, 0, 255), 682px 1877px rgb(143, 0, 255), 348px 1503px rgb(143, 0, 255), 407px 1139px rgb(143, 0, 255), 950px 1400px rgb(143, 0, 255), 922px 1139px rgb(143, 0, 255), 1697px 293px rgb(143, 0, 255), 1238px 1281px rgb(143, 0, 255), 1038px 1197px rgb(143, 0, 255), 376px 1889px rgb(143, 0, 255), 1255px 1680px rgb(143, 0, 255), 1008px 1316px rgb(143, 0, 255), 1538px 1447px rgb(143, 0, 255), 1186px 874px rgb(143, 0, 255), 1967px 640px rgb(143, 0, 255), 1341px 19px rgb(143, 0, 255), 29px 1732px rgb(143, 0, 255), 16px 1650px rgb(143, 0, 255), 1021px 1075px rgb(143, 0, 255), 723px 424px rgb(143, 0, 255), 1175px 41px rgb(143, 0, 255), 494px 1957px rgb(143, 0, 255), 1296px 431px rgb(143, 0, 255), 175px 1507px rgb(143, 0, 255), 831px 121px rgb(143, 0, 255), 498px 1947px rgb(143, 0, 255), 617px 880px rgb(143, 0, 255), 240px 403px rgb(143, 0, 255);
 }
 
-@keyframes animStar {
-  from {
-    transform: translateY(0rem);
-  }
-  to {
-    transform: translateY(-200rem);
-  }
-}
 .icon {
   height: 2.5rem;
   width: 2.5rem;

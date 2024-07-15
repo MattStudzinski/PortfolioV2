@@ -1,0 +1,107 @@
+.asteroid {
+
+    position: relative;
+    height: 11rem;
+    width: 11rem;
+
+    &__asteroid {
+        position: relative;
+        height: 11rem;
+        width: 11rem;
+    }
+    &__overlay {
+        width: 74px; 
+        height: 74px; 
+        position: absolute;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: rgba(66, 66, 66, 0.784);
+        padding: .3rem;
+        border-radius: 15rem;
+        
+    }
+
+}
+
+.asteroid2 {
+
+    position: relative;
+    height: 9rem;
+    width: 9rem;
+
+    &__asteroid2 {
+        position: relative;
+        height: 9rem;
+        width: 9rem;
+    }
+    &__overlay2 {
+        width: 64px; 
+        height: 64px; 
+        position: absolute;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: rgba(66, 66, 66, 0.784);
+        padding: .3rem;
+        border-radius: 15rem;
+        
+    }
+
+}
+
+.asteroid3 {
+
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+
+    &__asteroid3 {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+    }
+    &__overlay3 {
+        width: 104px; 
+        height: 104px; 
+        position: absolute;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: rgba(66, 66, 66, 0.784);
+        padding: .3rem;
+        border-radius: 15rem;
+        
+    }
+
+}
+
+.asteroid4 {
+
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+
+    &__asteroid4 {
+        position: relative;
+        height: 12rem;
+        width: 12rem;
+    }
+    &__overlay4 {
+        width: 84px; 
+        height: 84px; 
+        position: absolute;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        background: rgba(66, 66, 66, 0.784);
+        padding: .3rem;
+        border-radius: 15rem;
+        
+    }
+
+}
