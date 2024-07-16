@@ -106,64 +106,56 @@
 
 }
 .skills {
-
-    height: 70rem;
-    background-color: green;
-    width: 100%;
-
-    &__container {
-        height: 100%;
-        width: 100%; 
-    overflow: hidden;
-    }
-
-    &__parallax {
-        width: 100%;
-        height: 100%;
-    }
-
-    .react-parallax-content{
-        height:100%;
-    }
-
-    &__asteroid-container {
-        position: relative;
-    width: 100%; /* Ensure full width within the parallax container */
-    height: 100% /* Ensure full height within the parallax container */
-    }
-
-
-    &__asteroid {
-        position: absolute;
-        width: 100px; /* Adjust size as needed */
-        height: 100px;
-        opacity: 0;
-    }
-
-
-    &__asteroid--1 {
-        animation: moveAsteroid1 4s forwards ;
-        animation-delay: .65s;
-    }
-
-    &__asteroid--2 {
-        animation: moveAsteroid2 4s forwards ;
-        animation-delay:  .44s;
-    }
-
-    &__asteroid--3 {
-        animation: moveAsteroid3 4s forwards ;
-        animation-delay: .3s;
-    }
-
-    &__asteroid--4 {
-        animation: moveAsteroid4 4s forwards ;
-        animation-delay: .1s;
-    }
-
-    &__asteroid--5 {
-        animation: moveAsteroid5 4s forwards  ;
-        animation-delay: 1s;
-    }
+    height: 45%;
+    background-color: rgba(255, 255, 0, 0.235);
+    /* Other styles as needed */
 }
 
+.skills__container {
+    height: 100%;
+    width: 100%;
+}
+
+.skills__asteroid-container {
+    position: relative;
+    width: 100%; /* Ensure full width within the parallax container */
+    height: 100%; /* Ensure full height within the parallax container */
+}
+
+.skills__asteroid {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    opacity: 0; /* Start with opacity 0 to trigger animations when in viewport */
+}
+
+.skills__asteroid.animate {
+    animation-fill-mode: forwards; /* Ensure animation state persists after animation ends */
+}
+
+.skills__asteroid--1 {
+    animation: moveAsteroid1 4s forwards;
+    animation-delay: 0.65s;
+}
+
+.skills__asteroid--2 {
+    animation: moveAsteroid2 4s forwards;
+    animation-delay: 0.44s;
+}
+
+.skills__asteroid--3 {
+    animation: moveAsteroid3 4s forwards;
+    animation-delay: 0.3s;
+}
+
+.skills__asteroid--4 {
+    animation: moveAsteroid4 4s forwards;
+    animation-delay: 0.1s;
+}
+
+.skills__asteroid--5 {
+    animation: moveAsteroid5 4s forwards;
+    animation-delay: 1s;
+}
+
+/* Define your @keyframes moveAsteroid1, moveAsteroid2, etc. as per your requirements */
