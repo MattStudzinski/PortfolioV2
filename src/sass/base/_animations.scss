@@ -16,3 +16,84 @@
         background-position: 200% 50%;
     }
 }
+
+
+@keyframes moveAsteroid1 {
+    0% {
+        top: 4%;
+        left: -5%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 26%;
+        left: 26%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveAsteroid2 {
+    0% {
+        top: 7%;
+        left: -5%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 40%;
+        left: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveAsteroid3 {
+    0% {
+        top: -5%;
+        left: 10%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 33%;
+        left: 40%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveAsteroid4 {
+    0% {
+        top: 0%;
+        left: 0%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 47%;
+        left: 44%;
+        opacity: 1;
+    }
+}
+
+@keyframes moveAsteroid5 {
+    0% {
+        top: -5%;
+        left: 9%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 10%;
+        left: 33%;
+        opacity: 1;
+    }
+}

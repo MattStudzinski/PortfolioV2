@@ -14,6 +14,81 @@
     background-position: 200% 50%;
   }
 }
+@keyframes moveAsteroid1 {
+  0% {
+    top: 4%;
+    left: -5%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 26%;
+    left: 26%;
+    opacity: 1;
+  }
+}
+@keyframes moveAsteroid2 {
+  0% {
+    top: 7%;
+    left: -5%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 40%;
+    left: 30%;
+    opacity: 1;
+  }
+}
+@keyframes moveAsteroid3 {
+  0% {
+    top: -5%;
+    left: 10%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 33%;
+    left: 40%;
+    opacity: 1;
+  }
+}
+@keyframes moveAsteroid4 {
+  0% {
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 47%;
+    left: 44%;
+    opacity: 1;
+  }
+}
+@keyframes moveAsteroid5 {
+  0% {
+    top: -5%;
+    left: 9%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 10%;
+    left: 33%;
+    opacity: 1;
+  }
+}
 .asteroid {
   position: relative;
   height: 11rem;
@@ -107,26 +182,52 @@
 }
 
 .skills {
-  height: 50rem;
+  height: 70rem;
+  background-color: green;
   width: 100%;
 }
 .skills__container {
-  height: 50rem;
+  height: 100%;
   width: 100%;
   overflow: hidden;
+}
+.skills__parallax {
+  width: 100%;
+  height: 100%;
+}
+.skills .react-parallax-content {
+  height: 100%;
 }
 .skills__asteroid-container {
   position: relative;
   width: 100%; /* Ensure full width within the parallax container */
-  height: 50rem;
+  height: 100%;
 }
 .skills__asteroid {
   position: absolute;
   width: 100px; /* Adjust size as needed */
   height: 100px;
-  top: 50%; /* Adjust starting position */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.skills__asteroid--1 {
+  animation: moveAsteroid1 4s forwards;
+  animation-delay: 0.65s;
+}
+.skills__asteroid--2 {
+  animation: moveAsteroid2 4s forwards;
+  animation-delay: 0.44s;
+}
+.skills__asteroid--3 {
+  animation: moveAsteroid3 4s forwards;
+  animation-delay: 0.3s;
+}
+.skills__asteroid--4 {
+  animation: moveAsteroid4 4s forwards;
+  animation-delay: 0.1s;
+}
+.skills__asteroid--5 {
+  animation: moveAsteroid5 4s forwards;
+  animation-delay: 1s;
 }
 
 body {

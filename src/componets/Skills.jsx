@@ -8,33 +8,34 @@ import Asteroid5 from '../svg/Asteroid5';
 const Skills = () => {
     return (
         <section className='skills'>
-            <div className='skills__container'>
-                <Parallax
-                    blur={0}
-                    bgImage=""
-                    bgImageAlt="background"
-                    strength={200}
-                >
-                    <div className='skills__asteroid-container'>
-                        <div className='skills__asteroid'>
-                            <Asteroid1 />
-                        </div>
-                        <div className='skills__asteroid'>
-                            <Asteroid2 />
-                        </div>
-                        <div className='skills__asteroid'>
-                            <Asteroid3 />
-                        </div>
-                        <div className='skills__asteroid'>
-                            <Asteroid4 />
-                        </div>
-                        <div className='skills__asteroid'>
-                            <Asteroid5 />
-                        </div>
+        <div className='skills__container'>
+            <Parallax
+                className='skills__parallax'
+                blur={1}
+                bgImage=""
+                bgImageAlt="background"
+                strength={500} // Adjust strength for parallax effect
+            >
+                <div className='skills__asteroid-container'>
+                    <div className='skills__asteroid skills__asteroid--1'>
+                        <Asteroid1 />
                     </div>
-                </Parallax>
-            </div>
-        </section>
+                    <div className='skills__asteroid skills__asteroid--2'>
+                        <Asteroid2 />
+                    </div>
+                    <div className='skills__asteroid skills__asteroid--3'>
+                        <Asteroid3 />
+                    </div>
+                    <div className='skills__asteroid skills__asteroid--4'>
+                        <Asteroid4 />
+                    </div>
+                    <div className='skills__asteroid skills__asteroid--5'>
+                        <Asteroid5 />
+                    </div>
+                </div>
+            </Parallax>
+        </div>
+    </section>
     );
 };
 
