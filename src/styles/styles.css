@@ -386,12 +386,12 @@ html {
   align-items: center;
   width: 100%;
   position: relative;
-  padding: 50px 0; /* Add some padding to the top and bottom */
+  padding: 50px 0;
 }
 .timeline__line {
   position: absolute;
   left: 50%;
-  width: 2px;
+  width: 4px;
   height: 100%;
   background: #888;
   transform: translateX(-50%);
@@ -400,54 +400,63 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  height: 18rem;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   position: relative;
-  width: 75%; /* Make items half the width of the container */
-  margin-left: 80%; /* Position items to the right of the center line */
+  width: 50%;
+  margin-left: 50%;
+  flex-direction: column;
+  text-align: left;
 }
 .timeline__element::before {
   content: "";
   position: absolute;
-  left: -34.2px; /* Position the dot on the vertical line */
-  top: 20px; /* Adjust to align with the element */
-  width: 10px;
-  height: 10px;
+  left: -25.5px;
+  top: 70px;
+  width: 50px;
+  height: 50px;
   background: #888;
   border-radius: 50%;
   z-index: 1;
 }
 .timeline__element:nth-child(even)::before {
   left: auto;
-  right: 50.55%; /* Position the dot on the vertical line for even elements */
+  right: -25.5px;
 }
 .timeline__element:nth-child(even) {
   margin-left: 0;
+  margin-right: 50%;
 }
 .timeline__element.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.timeline__element:nth-child(even) {
-  margin-left: 20px;
-  margin-right: 0;
+.timeline__icon {
+  width: 50px;
+  height: 50px;
+  background: #888;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  z-index: 2;
 }
 .timeline__content-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
-}
-.timeline__content {
+  width: 70%;
   background: #444;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
   flex: 1;
 }
-.timeline__element:nth-child(even) .timeline__content {
-  margin-right: 20px;
-  margin-left: 0;
+.timeline__content {
+  background-color: rgb(158, 158, 158);
+  color: rgb(0, 0, 0);
+  height: 100%;
 }
 .timeline__title {
   margin: 0;
@@ -458,10 +467,10 @@ html {
 }
 .timeline__date {
   color: #888;
-  margin-left: 20px;
+  margin-bottom: 1rem;
 }
-.timeline__element:nth-child(even) .timeline__date {
-  margin-right: 20px;
+.timeline:nth-child(even) .timeline__date {
+  margin-right: 0;
   margin-left: 0;
 }
 
