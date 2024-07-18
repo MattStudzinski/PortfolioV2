@@ -380,50 +380,89 @@ html {
   color: rgb(143, 0, 255);
 }
 
-/* Experience.css */
-.experience {
+.timeline {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
+  padding: 50px 0; /* Add some padding to the top and bottom */
+}
+.timeline__line {
+  position: absolute;
+  left: 50%;
+  width: 2px;
   height: 100%;
+  background: #888;
+  transform: translateX(-50%);
 }
-
-.vertical-timeline-element-content {
-  background: #444 !important;
-  color: #fff !important;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.vertical-timeline-element-date {
-  color: #888 !important;
-}
-
-.vertical-timeline-element-icon {
-  background: #888 !important;
-  color: #fff !important;
+.timeline__element {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-/* Ensure SVG icon is centered */
-.vertical-timeline-element-icon > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vertical-timeline-element {
+  margin-bottom: 20px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative;
+  width: 75%; /* Make items half the width of the container */
+  margin-left: 80%; /* Position items to the right of the center line */
 }
-
-.vertical-timeline-element.visible {
+.timeline__element::before {
+  content: "";
+  position: absolute;
+  left: -34.2px; /* Position the dot on the vertical line */
+  top: 20px; /* Adjust to align with the element */
+  width: 10px;
+  height: 10px;
+  background: #888;
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline__element:nth-child(even)::before {
+  left: auto;
+  right: 50.55%; /* Position the dot on the vertical line for even elements */
+}
+.timeline__element:nth-child(even) {
+  margin-left: 0;
+}
+.timeline__element.visible {
   opacity: 1;
   transform: translateY(0);
+}
+.timeline__element:nth-child(even) {
+  margin-left: 20px;
+  margin-right: 0;
+}
+.timeline__content-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.timeline__content {
+  background: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  flex: 1;
+}
+.timeline__element:nth-child(even) .timeline__content {
+  margin-right: 20px;
+  margin-left: 0;
+}
+.timeline__title {
+  margin: 0;
+}
+.timeline__subtitle {
+  margin: 0;
+  color: #bbb;
+}
+.timeline__date {
+  color: #888;
+  margin-left: 20px;
+}
+.timeline__element:nth-child(even) .timeline__date {
+  margin-right: 20px;
+  margin-left: 0;
 }
 
 .projects {

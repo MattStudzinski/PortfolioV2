@@ -1,38 +1,34 @@
-import React from 'react';
-import { useEffect, useRef,  useState } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import WorkIcon from "../svg/workIcon.png"
+import React, { useEffect, useRef, useState } from 'react';
+import WorkIcon from "../svg/workIcon.png";
 import timelineElements from '../TimelineElement';
-import 'react-vertical-timeline-component/style.min.css';
+
 
 const Experience = () => {
-    const [isVisible, setIsVisible] = useState([])
-    const timelineItemRefs = useRef([])
+    const [visibleElements, setVisibleElements] = useState([]);
+    const elementRefs = useRef([]);
 
-    useEffect (() => {
+    useEffect(() => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 1,
-        }
+            threshold: 0.5,
+        };
 
-        const handleIntersection = (entries, observer) => {
+        const handleIntersection = (entries) => {
             entries.forEach((entry) => {
-                const { id } = entry.target.dataset;
-                if (entry.isIntersecting && !isVisible.includes(id)) {
-                    setIsVisible((prevVisible) => [...prevVisible, id]);
-                } else if (!entry.isIntersecting && isVisible.includes(id)) {
-                    setIsVisible((prevVisible) => prevVisible.filter((item) => item !== id));
+                const id = entry.target.getAttribute('data-id');
+                if (entry.isIntersecting) {
+                    setVisibleElements((prev) => [...new Set([...prev, id])]);
+                } else {
+                    setVisibleElements((prev) => prev.filter((item) => item !== id));
                 }
             });
         };
 
         const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-        timelineItemRefs.current.forEach((ref) => {
-            if (ref.current) {
-                observer.observe(ref.current);
-            }
+        elementRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref);
         });
 
         return () => {
@@ -40,28 +36,29 @@ const Experience = () => {
         };
     }, []);
 
-    let workIconStyles = { background: "#242424", fill: "#ffffff" };
     return (
-        <section className="experience">
-        <VerticalTimeline animate={true}>
-            {timelineElements.map((element) => (
-                <VerticalTimelineElement
+        <section className="timeline">
+            <div className="timeline__line"></div>
+            {timelineElements.map((element, index) => (
+            
+                <div
                     key={element.id}
-                    ref={(el) => (timelineItemRefs.current[element.id - 1] = el)}
-                    className={`vertical-timeline-element ${isVisible.includes(element.id.toString()) ? 'visible' : ''}`}
-                    date={element.date}
-                    iconStyle={{ background: '#888', color: '#fff' }}
-                    icon={<img src={WorkIcon} alt="Work Icon" style={{ width: '100%', height: '100%' }} />}
-                    data-id={element.id}
+                    className={`timeline__element ${visibleElements.includes(element.id.toString()) ? 'visible' : ''}`}
+                    ref={(el) => (elementRefs.current[index] = el)}
+                    data-id={element.id.toString()}
                 >
-                    <h3 className="vertical-timeline-element-title">{element.title}</h3>
-                    <h4 className="vertical-timeline-element-subtitle">{element.location}</h4>
-                    <p>{element.description}</p>
-                    <button>{element.buttonText}</button>
-                </VerticalTimelineElement>
+                    <div className='timeline__content-container'>
+                    <div className="timeline__date">{element.date}</div>
+                    <div className="timeline__content">
+                        <h3 className="timeline__title">{element.title}</h3>
+                        <h4 className="timeline__subtitle">{element.location}</h4>
+                        <p>{element.description}</p>
+                        <button>{element.buttonText}</button>
+                    </div>
+                </div>
+                </div>
             ))}
-        </VerticalTimeline>
-    </section>
+        </section>
     );
 };
 
