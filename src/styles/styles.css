@@ -89,152 +89,6 @@
     opacity: 1;
   }
 }
-.asteroid {
-  position: relative;
-  height: 11rem;
-  width: 11rem;
-}
-.asteroid__asteroid {
-  position: relative;
-  height: 11rem;
-  width: 11rem;
-}
-.asteroid__overlay {
-  width: 74px;
-  height: 74px;
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(66, 66, 66, 0.784);
-  padding: 0.3rem;
-  border-radius: 15rem;
-}
-
-.asteroid2 {
-  position: relative;
-  height: 9rem;
-  width: 9rem;
-}
-.asteroid2__asteroid2 {
-  position: relative;
-  height: 9rem;
-  width: 9rem;
-}
-.asteroid2__overlay2 {
-  width: 64px;
-  height: 64px;
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(66, 66, 66, 0.784);
-  padding: 0.3rem;
-  border-radius: 15rem;
-}
-
-.asteroid3 {
-  position: relative;
-  height: 15rem;
-  width: 15rem;
-}
-.asteroid3__asteroid3 {
-  position: relative;
-  height: 15rem;
-  width: 15rem;
-}
-.asteroid3__overlay3 {
-  width: 114px;
-  height: 114px;
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(66, 66, 66, 0.784);
-  padding: 0.3rem;
-  border-radius: 15rem;
-}
-
-.asteroid4 {
-  position: relative;
-  height: 12rem;
-  width: 12rem;
-}
-.asteroid4__asteroid4 {
-  position: relative;
-  height: 12rem;
-  width: 12rem;
-}
-.asteroid4__overlay4 {
-  width: 84px;
-  height: 84px;
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(66, 66, 66, 0.784);
-  padding: 0.3rem;
-  border-radius: 15rem;
-}
-
-.skills {
-  height: 45%;
-  background-color: rgba(255, 255, 0, 0.235);
-  /* Other styles as needed */
-}
-
-.skills__container {
-  height: 100%;
-  width: 100%;
-}
-
-.skills__asteroid-container {
-  position: relative;
-  width: 100%; /* Ensure full width within the parallax container */
-  height: 100%; /* Ensure full height within the parallax container */
-}
-
-.skills__asteroid {
-  position: absolute;
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  opacity: 0; /* Start with opacity 0 to trigger animations when in viewport */
-}
-
-.skills__asteroid.animate {
-  animation-fill-mode: forwards; /* Ensure animation state persists after animation ends */
-}
-
-.skills__asteroid--1 {
-  animation: moveAsteroid1 4s forwards;
-  animation-delay: 0.65s;
-}
-
-.skills__asteroid--2 {
-  animation: moveAsteroid2 4s forwards;
-  animation-delay: 0.44s;
-}
-
-.skills__asteroid--3 {
-  animation: moveAsteroid3 4s forwards;
-  animation-delay: 0.3s;
-}
-
-.skills__asteroid--4 {
-  animation: moveAsteroid4 4s forwards;
-  animation-delay: 0.1s;
-}
-
-.skills__asteroid--5 {
-  animation: moveAsteroid5 4s forwards;
-  animation-delay: 1s;
-}
-
-/* Define your @keyframes moveAsteroid1, moveAsteroid2, etc. as per your requirements */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -384,7 +238,16 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  position: relative;
+  padding: 50px 0;
+}
+.timeline__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
   position: relative;
   padding: 50px 0;
 }
@@ -393,43 +256,82 @@ html {
   left: 50%;
   width: 4px;
   height: 100%;
-  background: #888;
+  background: rgb(143, 0, 255);
   transform: translateX(-50%);
 }
-.timeline__element {
+.timeline__element-left {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  height: 18rem;
+  height: 20rem;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(-40px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 0.2s;
   position: relative;
   width: 50%;
   margin-left: 50%;
   flex-direction: column;
   text-align: left;
 }
-.timeline__element::before {
+.timeline__element-left::before {
   content: "";
   position: absolute;
-  left: -25.5px;
-  top: 70px;
-  width: 50px;
-  height: 50px;
-  background: #888;
+  left: -8.9px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: rgb(143, 0, 255);
   border-radius: 50%;
   z-index: 1;
 }
-.timeline__element:nth-child(even)::before {
+.timeline__element-left:nth-child(even)::before {
   left: auto;
-  right: -25.5px;
+  right: -8.9px;
 }
-.timeline__element:nth-child(even) {
+.timeline__element-left:nth-child(even) {
   margin-left: 0;
   margin-right: 50%;
 }
-.timeline__element.visible {
+.timeline__element-left.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline__element-right {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 20rem;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation-delay: 0.2s;
+  position: relative;
+  width: 50%;
+  margin-left: 50%;
+  flex-direction: column;
+  text-align: left;
+}
+.timeline__element-right::before {
+  content: "";
+  position: absolute;
+  left: -8.9px;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: rgb(143, 0, 255);
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline__element-right:nth-child(even)::before {
+  left: auto;
+  right: -8.9px;
+}
+.timeline__element-right:nth-child(even) {
+  margin-left: 0;
+  margin-right: 50%;
+}
+.timeline__element-right.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -447,27 +349,47 @@ html {
 .timeline__content-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  background: #444;
+  width: 100%;
   color: #fff;
   border-radius: 5px;
   flex: 1;
-}
-.timeline__content {
-  background-color: rgb(158, 158, 158);
-  color: rgb(0, 0, 0);
   height: 100%;
+}
+.timeline__content-left {
+  background-color: rgb(85, 85, 85);
+  box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+  color: rgb(255, 255, 255);
+  margin: 0 3rem 0 0;
+  height: 100%;
+  border-radius: 2rem 0rem 2rem 2rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+}
+.timeline__content-right {
+  background-color: rgb(85, 85, 85);
+  box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+  color: rgb(255, 255, 255);
+  margin: 0 0 0 3rem;
+  height: 100%;
+  border-radius: 0rem 2rem 2rem 2rem;
+  padding: 1rem 1rem 1rem 1.5rem;
 }
 .timeline__title {
   margin: 0;
+  font-size: 2rem;
 }
 .timeline__subtitle {
   margin: 0;
   color: #bbb;
 }
-.timeline__date {
-  color: #888;
-  margin-bottom: 1rem;
+.timeline__date-left {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 3.5rem;
+}
+.timeline__date-right {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 5rem;
 }
 .timeline:nth-child(even) .timeline__date {
   margin-right: 0;
@@ -650,6 +572,38 @@ html {
 
 .Tilt {
   transition: transform 0.5s ease-out;
+}
+
+.svg-container {
+  background-color: rgb(85, 85, 85);
+  margin: 1rem;
+  box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 15rem 0;
+}
+.skills__container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+.skills__icon {
+  width: 6rem;
+  height: 6rem;
 }
 
 #stars {

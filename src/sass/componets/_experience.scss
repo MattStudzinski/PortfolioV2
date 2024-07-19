@@ -2,53 +2,107 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     position: relative;
-    padding: 50px 0; // Add some padding to the top and bottom
+    padding: 50px 0; 
+
+    &__container {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    position: relative;
+    padding: 50px 0;
+    }
 
     &__line {
         position: absolute;
         left: 50%;
         width: 4px;
         height: 100%;
-        background: #888;
+        background: $primary;
         transform: translateX(-50%);
     }
 
-    &__element {
+    &__element-left {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
-        height: 18rem;
+        height: 20rem;
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-40px);
         transition: opacity 0.5s ease, transform 0.5s ease;
+        transition-delay: .2s;
         position: relative;
-        width: 50%; // Adjust width to be half of the container for better layout
-        margin-left: 50%; // Center align items to the right of the center line
+        width: 50%; 
+        margin-left: 50%; 
         flex-direction: column;
-        text-align: left; // Align text to the left for better readability
+        text-align: left; 
 
         &::before {
             content: '';
             position: absolute;
-            left: -25.5px; // Position the dot on the vertical line
-            top: 70px; // Adjust to align with the element
-            width: 50px;
-            height: 50px;
-            background: #888;
+            left: -8.9px; 
+            top: 20px; 
+            width: 18px;
+            height: 18px;
+            background: $primary;
             border-radius: 50%;
             z-index: 1;
         }
 
         &:nth-child(even)::before {
             left: auto;
-            right: -25.5px; // Position the dot on the vertical line for even elements
+            right: -8.9px; 
         }
 
         &:nth-child(even) {
             margin-left: 0;
-            margin-right: 50%; // Center align items to the left of the center line
+            margin-right: 50%;
+        }
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__element-right {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        height: 20rem;
+        opacity: 0;
+        transform: translateX(40px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        animation-delay: .2s;
+        position: relative;
+        width: 50%; 
+        margin-left: 50%; 
+        flex-direction: column;
+        text-align: left; 
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -8.9px; 
+            top: 20px; 
+            width: 18px;
+            height: 18px;
+            background: $primary;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        &:nth-child(even)::before {
+            left: auto;
+            right: -8.9px; 
+        }
+
+        &:nth-child(even) {
+            margin-left: 0;
+            margin-right: 50%;
         }
 
         &.visible {
@@ -66,29 +120,44 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            z-index: 2; // Ensure the icon is above the dot
+            z-index: 2; 
         }
 
         &__content-container {
             display: flex;
             flex-direction: column;
-            width: 70%; // Adjust width to fit within the container
-            background: #444;
+            width: 100%; 
             color: #fff;
             border-radius: 5px;
             flex: 1;
+            height: 100%;
         }
 
-        &__content {
-            background-color: rgb(158, 158, 158); // Red background
-            color: rgb(0, 0, 0); // Green text color
+        &__content-left {
+            background-color: rgb(85, 85, 85); 
+            box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+            color: $text; 
+            margin: 0 3rem 0 0;
             height: 100%;
+            border-radius: 2rem 0rem 2rem 2rem;
+            padding: 1rem 1rem 1rem 1.5rem ;
+        }
+        &__content-right {
+            background-color: rgb(85, 85, 85); 
+            box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+            color: $text; 
+            margin: 0 0 0 3rem;
+            height: 100%;
+            border-radius: 0rem 2rem 2rem 2rem;
+            padding: 1rem 1rem 1rem 1.5rem ;
         }
 
         
 
         &__title {
             margin: 0;
+            font-size: 2rem;
+
         }
 
         &__subtitle {
@@ -96,9 +165,16 @@
             color: #bbb;
         }
 
-        &__date {
-            color: #888;
-            margin-bottom: 1rem;
+        &__date-left {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 3.5rem
+        }
+
+        &__date-right {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 5rem
         }
 
         &:nth-child(even) &__date {
@@ -106,3 +182,4 @@
             margin-left: 0;
         }
     }
+
