@@ -6,6 +6,7 @@ import Javascript from '../svg/JavascriptLogo';
 import ReactLogo from '../svg/React';
 import Html from '../svg/HtmlLogo';
 import Sass from '../svg/Sass';
+import JwtLogo from '../svg/JwtLogo';
 
 
 const Skills = () => {
@@ -15,6 +16,7 @@ const Skills = () => {
     const [ref4, inView4] = useInView({ threshold: 0.1, triggerOnce: true });
     const [ref5, inView5] = useInView({ threshold: 0.1, triggerOnce: true });
     const [ref6, inView6] = useInView({ threshold: 0.1, triggerOnce: true });
+    const [ref7, inView7] = useInView({ threshold: 0.1, triggerOnce: true });
 
     return (
         <section className='skills'>
@@ -37,6 +39,9 @@ const Skills = () => {
                     </div>
                     <div ref={ref6} className={`skills__item ${inView6 ? 'skills__item--6' : ''}`}>
                         <Sass />
+                    </div>
+                    <div ref={ref7} className={`skills__item ${inView7 ? 'skills__item--7' : ''}`}>
+                        <JwtLogo />
                     </div>
                 </div>
             </div>
