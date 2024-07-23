@@ -12,7 +12,24 @@
     justify-content: center;
     align-items: center;
 
+    
 }
+.svg-container-large {
+    background-color: rgb(85, 85, 85);
+    margin: 1rem;
+    box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .skills {
     display: flex;
@@ -30,7 +47,18 @@
 
     &__main-skills {
         display: flex;
+        justify-content: center;
 
+    }
+
+    &__secondary-skills {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__aux-skills {
+        display: flex;
+        justify-content: center;
     }
 
 
@@ -38,5 +66,17 @@
 
         width: 6rem;
         height: 6rem;
+    }
+
+    &__icon-med {
+
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__icon-large {
+
+        width: 11rem;
+        height: 11rem;
     }
 }

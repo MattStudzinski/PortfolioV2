@@ -9,6 +9,10 @@ import Sass from '../svg/Sass';
 import JwtLogo from '../svg/JwtLogo';
 import ExpressLogo from '../svg/ExpressLogo';
 import NodeLogo from '../svg/NodeLogo';
+import PythonLogo from '../svg/PythonLogo';
+import PostmanLogo from '../svg/PostmanLogo';
+import GitLogo from '../svg/GitLogo';
+
 
 
 const Skills = () => {
@@ -27,45 +31,62 @@ const Skills = () => {
 
                     <div className='skills__main-skills'>
                         
-                        <div ref={ref1} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                        <div ref={ref1} className={`skills__item-large  ${inView2 ? 'skills__item--2' : ''}`}>
                             <MongoLogo />
                         </div>
-                        <div ref={ref2} className={`skills__item  ${inView1 ?       'skills__item--1' : ''}`}>
+                        <div ref={ref2} className={`skills__item-large  ${inView1 ?       'skills__item--1' : ''}`}>
                             <ReactLogo />
                         </div>
-                        <div ref={ref3} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                        <div ref={ref3} className={`skills__item-large  ${inView2 ? 'skills__item--2' : ''}`}>
                             <ExpressLogo />
                         </div>
-                        <div ref={ref4} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                        <div ref={ref4} className={`skills__item-large  ${inView2 ? 'skills__item--2' : ''}`}>
                             <NodeLogo />
                         </div>
                         
                     </div>
 
                     <div className='skills__secondary-skills'>
-                        <div ref={ref2} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
-                            
-                        </div>
-                    </div>
 
-                    <div className='skills__aux-skills'>
                         <div ref={ref3} className={`skills__item  ${inView3 ? 'skills__item--3' : ''}`}>
                             <Javascript />
                         </div>
+
+                        <div ref={ref4} className={`skills__item  ${inView4 ? 'skills__item--4' : ''}`}>
+                            <CssLogo />
+                        </div>
+
+                        <div ref={ref5} className={`skills__item ${inView5 ? 'skills__item--5' : ''}`}>
+                            <Sass />
+                        </div>
+
+                        <div ref={ref5} className={`skills__item ${inView5 ? 'skills__item--5' : ''}`}>
+                            <JwtLogo />
+                        </div>
+
+                        <div ref={ref5} className={`skills__item ${inView5 ? 'skills__item--5' : ''}`}>
+                            <Html />
+                        </div>
+
+                    </div>
+
+                    <div className='skills__aux-skills'>
+
+                    <div ref={ref6} className={`skills__item ${inView6 ? 'skills__item--6' : ''}`}>
+                        <PythonLogo />
+                    </div>
+
+                    <div ref={ref6} className={`skills__item ${inView6 ? 'skills__item--6' : ''}`}>
+                        <PostmanLogo />
+                    </div>
+
+                    <div ref={ref6} className={`skills__item ${inView6 ? 'skills__item--6' : ''}`}>
+                        <GitLogo />
+                    </div>
+
                     </div>
                     
-                    <div ref={ref4} className={`skills__item  ${inView4 ? 'skills__item--4' : ''}`}>
-                        <CssLogo />
-                    </div>
-                    <div ref={ref5} className={`skills__item ${inView5 ? 'skills__item--5' : ''}`}>
-                        <Html />
-                    </div>
-                    <div ref={ref6} className={`skills__item ${inView6 ? 'skills__item--6' : ''}`}>
-                        <Sass />
-                    </div>
-                    <div ref={ref7} className={`skills__item ${inView7 ? 'skills__item--7' : ''}`}>
-                        <JwtLogo />
-                    </div>
+                
                 </div>
             </div>
         </section>
