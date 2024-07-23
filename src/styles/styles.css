@@ -601,6 +601,9 @@ html {
   width: 80%;
   justify-content: center;
 }
+.skills__main-skills {
+  display: flex;
+}
 .skills__icon {
   width: 6rem;
   height: 6rem;

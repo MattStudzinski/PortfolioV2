@@ -7,6 +7,8 @@ import ReactLogo from '../svg/React';
 import Html from '../svg/HtmlLogo';
 import Sass from '../svg/Sass';
 import JwtLogo from '../svg/JwtLogo';
+import ExpressLogo from '../svg/ExpressLogo';
+import NodeLogo from '../svg/NodeLogo';
 
 
 const Skills = () => {
@@ -22,17 +24,38 @@ const Skills = () => {
         <section className='skills'>
             <div className='skills__container'>
                 <div className='skills__item-container'>
-                    <div ref={ref1} className={`skills__item  ${inView1 ? 'skills__item--1' : ''}`}>
-                        <CssLogo />
+
+                    <div className='skills__main-skills'>
+                        
+                        <div ref={ref1} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                            <MongoLogo />
+                        </div>
+                        <div ref={ref2} className={`skills__item  ${inView1 ?       'skills__item--1' : ''}`}>
+                            <ReactLogo />
+                        </div>
+                        <div ref={ref3} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                            <ExpressLogo />
+                        </div>
+                        <div ref={ref4} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                            <NodeLogo />
+                        </div>
+                        
                     </div>
-                    <div ref={ref2} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
-                        <MongoLogo />
+
+                    <div className='skills__secondary-skills'>
+                        <div ref={ref2} className={`skills__item  ${inView2 ? 'skills__item--2' : ''}`}>
+                            
+                        </div>
                     </div>
-                    <div ref={ref3} className={`skills__item  ${inView3 ? 'skills__item--3' : ''}`}>
-                        <Javascript />
+
+                    <div className='skills__aux-skills'>
+                        <div ref={ref3} className={`skills__item  ${inView3 ? 'skills__item--3' : ''}`}>
+                            <Javascript />
+                        </div>
                     </div>
+                    
                     <div ref={ref4} className={`skills__item  ${inView4 ? 'skills__item--4' : ''}`}>
-                        <ReactLogo />
+                        <CssLogo />
                     </div>
                     <div ref={ref5} className={`skills__item ${inView5 ? 'skills__item--5' : ''}`}>
                         <Html />
