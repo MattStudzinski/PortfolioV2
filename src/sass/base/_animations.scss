@@ -48,12 +48,36 @@
 }
 
 
-@keyframes float {
+@keyframes float1 {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Adjust the value to control the height of the float */
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
     }
     100% {
         transform: translateY(0);

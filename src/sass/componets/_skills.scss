@@ -3,7 +3,7 @@
 
 
 .svg-container-large {
-    animation: float 3s ease-in-out infinite;
+    animation: float1 3s ease-in-out infinite;
     background: rgba( 255, 255, 255, 0.05 );
 box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 backdrop-filter: blur( .5px );
@@ -24,7 +24,7 @@ border: 1px solid $primary;
     align-items: center;
 }
 .svg-container-medium {
-    animation: float 3s ease-in-out infinite;
+    animation: float2 3s ease-in-out infinite;
     background: rgba( 255, 255, 255, 0.05 );
 box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 backdrop-filter: blur( .5px );
@@ -44,7 +44,7 @@ border: 1px solid $primary;
     align-items: center;
 }
 .svg-container-small {
-    animation: float 3s ease-in-out infinite;
+    animation: float3 3s ease-in-out infinite;
     background: rgba( 255, 255, 255, 0.05 );
 box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 backdrop-filter: blur( .5px );
@@ -169,6 +169,7 @@ border: 1px solid $primary;
     
     .skills__item--10.skills__item--inView {
         animation-delay: 2.7s;
+        
     }
     
     .skills__item--11.skills__item--inView {

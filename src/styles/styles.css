@@ -40,12 +40,34 @@
     transform: translateX(0);
   }
 }
-@keyframes float {
+@keyframes float1 {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Adjust the value to control the height of the float */
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
   }
   100% {
     transform: translateY(0);
@@ -537,7 +559,7 @@ html {
 }
 
 .svg-container-large {
-  animation: float 3s ease-in-out infinite;
+  animation: float1 3s ease-in-out infinite;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(0.5px);
@@ -558,7 +580,7 @@ html {
 }
 
 .svg-container-medium {
-  animation: float 3s ease-in-out infinite;
+  animation: float2 3s ease-in-out infinite;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(0.5px);
@@ -579,7 +601,7 @@ html {
 }
 
 .svg-container-small {
-  animation: float 3s ease-in-out infinite;
+  animation: float3 3s ease-in-out infinite;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(0.5px);
