@@ -2,6 +2,7 @@ import React from 'react';
 import Experience from './Experience';
 import Projects from './Projects';
 import Skills from './Skills';
+import Contact from './Contact';
 
 const Body = () => {
     return (
@@ -9,6 +10,7 @@ const Body = () => {
             <Experience />
             <Skills />
             <Projects />
+            <Contact />
             
         </section>
     );

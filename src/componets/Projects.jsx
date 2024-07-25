@@ -4,7 +4,7 @@ import {Tilt} from 'react-tilt';
 
 const Projects = () => {
     return (
-        <section className='projects'>
+        <section id="projects" className='projects'>
 
             
             <div className='projects__card-container'>

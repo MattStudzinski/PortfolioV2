@@ -14,10 +14,12 @@
     }
 
     &__name{
+        animation: nameSlide 1.6s ease-in-out;
         font-size: 5rem;
     }
 
     &__title {
+        animation: titleSlide 1.6s ease-in-out;
         display: flex;
         font-size: 4.5rem;
     }

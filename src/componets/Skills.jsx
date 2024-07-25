@@ -32,7 +32,7 @@ const Skills = () => {
 
 
     return (
-        <section className='skills'>
+        <section id="skills" className='skills'>
         <div className='skills__container'>
             <div className='skills__item-container'>
                 <div className='skills__main-skills'>

@@ -37,7 +37,7 @@ const Experience = () => {
     }, []);
 
     return (
-        <section className="timeline">
+        <section id='experience' className="timeline">
             <div className='timeline__container'>
             <div className="timeline__line"></div>
             {timelineElements.map((element, index) => (

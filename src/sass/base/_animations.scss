@@ -83,3 +83,29 @@
         transform: translateY(0);
     }
 }
+
+@keyframes nameSlide {
+    0% {
+        transform: translateX(100vw)
+    }
+    70% {
+        transform: translateX(-15%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes titleSlide {
+    0% {
+        transform: translateX(-100vw)
+    }
+    70% {
+        transform: translateX(15%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
