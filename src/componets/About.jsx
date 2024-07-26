@@ -13,8 +13,8 @@ const About = () => {
                 <p className='about__bio'> Welcome to my portfolio! Driven by a deep passion for coding, I craft tech solutions that tackle real-world challenges. Beyond programming, I'm fascinated by cars and enjoy exploring new culinary adventures. Let's innovate together!</p>
 
                 <div className='about__navigation'>
-                    <a href='#skills' className='about__navigation-link'>Skills</a>
                     <a href='#experience' className='about__navigation-link'>Experience</a>
+                    <a href='#skills' className='about__navigation-link'>Skills</a>
                     <a href='#projects' className='about__navigation-link'>Projects</a>
                     <a href='#contact' className='about__navigation-link'>Contact</a>
                 </div>
