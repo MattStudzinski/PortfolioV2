@@ -292,7 +292,6 @@ html {
   height: 18px;
   background: rgb(143, 0, 255);
   border-radius: 50%;
-  z-index: 1;
 }
 .timeline__element-left:nth-child(even)::before {
   left: auto;
@@ -330,7 +329,6 @@ html {
   height: 18px;
   background: rgb(143, 0, 255);
   border-radius: 50%;
-  z-index: 1;
 }
 .timeline__element-right:nth-child(even)::before {
   left: auto;
@@ -353,7 +351,6 @@ html {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  z-index: 2;
 }
 .timeline__content-container {
   display: flex;
@@ -872,6 +869,16 @@ html {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+}
+
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
 
 #stars {

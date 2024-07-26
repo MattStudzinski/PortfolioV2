@@ -49,7 +49,7 @@
             height: 18px;
             background: $primary;
             border-radius: 50%;
-            z-index: 1;
+            
         }
 
         &:nth-child(even)::before {
@@ -92,7 +92,7 @@
             height: 18px;
             background: $primary;
             border-radius: 50%;
-            z-index: 1;
+            
         }
 
         &:nth-child(even)::before {
@@ -120,7 +120,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            z-index: 2; 
+            
         }
 
         &__content-container {
