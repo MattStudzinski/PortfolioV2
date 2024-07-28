@@ -1,7 +1,7 @@
 let timelineElements = [
     {
         id:1,
-        title: "materials Coordinator",
+        title: "Application Developer",
         location:"The Everett Clinic",
         description: "did lots of work such as moving boxes ya know",
         buttonText: "View Projects",
