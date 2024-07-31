@@ -138,44 +138,53 @@ html {
 
 .sticky-navigation {
   width: 50%;
-  background-color: rgb(40, 40, 40);
-  box-shadow: 0 2px 4px rgb(143, 0, 255);
-  height: 5rem;
+  height: 6rem;
+  background-color: rgba(40, 40, 40, 0.8);
+  box-shadow: 0 0 1em 0 white, inset 0 0 1em 0 white;
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
   display: flex;
   justify-content: space-around;
   align-items: center;
   transition: all 0.3s ease-in-out;
   z-index: 1000;
   position: fixed;
-  top: -50px; /* Position the navigation bar above the viewport initially */
+  top: -50px;
   left: 0;
   right: 0;
   margin: 1.5rem auto;
   opacity: 0;
-  border-radius: 1rem;
+  border-radius: 50rem;
 }
 .sticky-navigation.visible {
-  top: 0; /* Slide down to the top of the viewport */
+  top: 0;
   opacity: 1;
 }
 .sticky-navigation.hidden {
-  top: -50px; /* Slide up to hide above the viewport */
+  top: -50px;
   opacity: 0;
 }
 .sticky-navigation .sticky-navigation-link {
+  background: none;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 15px;
+  height: 70%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #e3f7f5;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-  background-color: rgb(143, 0, 255);
-  padding: 0.5rem 1rem;
-  height: 80%;
-  border-radius: 3rem;
+  border-radius: 5rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  background: none;
+}
+.sticky-navigation .sticky-navigation-link:hover {
+  background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Make text transparent to show gradient */
+  transform: scale(1.2); /* Scale up on hover */
+  letter-spacing: 0.2rem; /* Increase letter spacing on hover */
 }
 
 .about {
