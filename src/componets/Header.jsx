@@ -14,7 +14,7 @@ const Header = () => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: .2,
+            threshold: .4,
         }
 
         const handleIntersection = (entries) => {
@@ -40,7 +40,7 @@ const Header = () => {
     }, [])
     return (
         <section className='header'>
-            {showStickyNav && <StickyNav />}
+            <StickyNav show={showStickyNav} />
             <Navbar />
             <section id= "about" ref={aboutRef} className="about">
             <About />

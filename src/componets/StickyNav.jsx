@@ -2,26 +2,12 @@ import {useEffect, useState, useRef} from 'react';
 
 
 
-const StickyNav = () => {
-
-    const [isSticky, setIsSticky] = useState(false)
+const StickyNav = ({ show }) => {
     const navRef = useRef(null)
 
-    useEffect (() => {
-        const handleScroll = () => {
-            if (navRef.current) {
-                setIsSticky (window.scrollY > navRef.current.offsetTop)
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll) 
-            return () => {
-                window.removeEventListener('scroll', handleScroll)
-            }
-        
-    }, [])
+    
     return (
-        <div ref={navRef} className={`sticky-navigation ${isSticky ? 'sticky' : ''}`}>
+        <div ref={navRef} className={`sticky-navigation ${show ? 'visible' : 'hidden'}`}>
             <a href='#experience' className='sticky-navigation-link'>Experience</a>
             <a href='#skills' className='sticky-navigation-link'>Skills</a>
             <a href='#projects' className='sticky-navigation-link'>Projects</a>

@@ -1,31 +1,44 @@
 .sticky-navigation {
-    width: 60%; 
+    width: 50%;
     background-color: $background;
     box-shadow: 0 2px 4px $primary;
-    padding: 10px 0;
+    height: 5rem;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: center;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
     position: fixed;
+    top: -50px; /* Position the navigation bar above the viewport initially */
     left: 0;
     right: 0;
-    margin: 1.5rem auto; 
+    margin: 1.5rem auto;
     opacity: 0;
-    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
     border-radius: 1rem;
 
-    &.sticky {
-        top: 0;
+    &.visible {
+        top: 0; /* Slide down to the top of the viewport */
         opacity: 1;
     }
 
+    &.hidden {
+        top: -50px; /* Slide up to hide above the viewport */
+        opacity: 0;
+    }
+
     .sticky-navigation-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 15px;
         text-decoration: none;
-        color: white;
-        font-size: 1.2rem;
+        color: $text;
         font-weight: bold;
+        font-size: 1.3rem;
+        letter-spacing: .1rem;
+        background-color: $primary;
+        padding: .5rem 1rem;
+        height: 80%;
+        border-radius: 3rem;
     }
 }

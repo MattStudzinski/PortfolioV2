@@ -28,7 +28,7 @@ let timelineElements = [
     },
     {
         id:4,
-        title: "developer",
+        title: "Technical Solutions Developer",
         location:"Optum",
         description: "did lots of work such as moving boxes ya know",
         buttonText: "View Projects",
