@@ -41,26 +41,29 @@ const Contact = () => {
         }
       };
 
-    return (
+      return (
         <section id='contact' className='contact'>
-            <form onSubmit={onSubmit} className='contact__form'>
-                <h1 className='contact__form-title'>Lets collaborate!</h1>
-                <div className='contact__form-box'>
-                    <label className='contact__form-label'>Full Name</label>
-                    <input className='contact__form-input' type='text' placeholder='Enter your name' name='name' required/>
+            <div className='contact__container'>
+                <div className='contact__image-container'>
+                    <h1 className='contact__title'>Let's Collaborate!</h1>
+                    <img src="https://static.vecteezy.com/system/resources/previews/004/257/968/non_2x/abstract-purple-fluid-wave-background-free-vector.jpg" alt="Abstract Background" className='contact__image' />
                 </div>
-
-                <div className='contact__form-box'>
-                    <label className='contact__form-label'>Email Address</label>
-                    <input className='contact__form-input' type='email' placeholder='Enter your email' name='email' required/>
-                </div>
-
-                <div className='contact__form-box'>
-                    <label className='contact__form-label'>Message</label>
-                    <textarea className='contact__form-input' name="message" id="contact__form-text-area" placeholder='Message me!' required></textarea>
-                </div>
-                <button className='contact__form-send-button' type='submit'>Send Message</button>
-            </form>
+                <form onSubmit={onSubmit} className='contact__form'>
+                    <div className='contact__form-box'>
+                        <label className='contact__form-label'>Full Name</label>
+                        <input className='contact__form-input' type='text' placeholder='Enter your name' name='name' required/>
+                    </div>
+                    <div className='contact__form-box'>
+                        <label className='contact__form-label'>Email Address</label>
+                        <input className='contact__form-input' type='email' placeholder='Enter your email' name='email' required/>
+                    </div>
+                    <div className='contact__form-box'>
+                        <label className='contact__form-label'>Message</label>
+                        <textarea className='contact__form-input' name="message" id="contact__form-text-area" placeholder='Message me!' required></textarea>
+                    </div>
+                    <button className='contact__form-send-button' type='submit'>Send Message</button>
+                </form>
+            </div>
         </section>
     );
 };

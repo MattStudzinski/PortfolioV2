@@ -47,9 +47,10 @@
             background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
             -webkit-background-clip: text;
             background-clip: text;
-            color: transparent; /* Make text transparent to show gradient */
-            transform: scale(1.2); /* Scale up on hover */
-            letter-spacing: 0.2rem; /* Increase letter spacing on hover */
+            color: transparent;
+            transform: scale(1.2); 
+            letter-spacing: 0.2rem; 
+            
         }
       }
       

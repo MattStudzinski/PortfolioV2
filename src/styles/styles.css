@@ -182,15 +182,16 @@ html {
   background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Make text transparent to show gradient */
-  transform: scale(1.2); /* Scale up on hover */
-  letter-spacing: 0.2rem; /* Increase letter spacing on hover */
+  color: transparent;
+  transform: scale(1.2);
+  letter-spacing: 0.2rem;
 }
 
 .about {
   display: flex;
   color: rgb(255, 255, 255);
   width: 75%;
+  max-width: 90%;
   height: 74rem;
   justify-content: center;
   align-items: center;
@@ -784,6 +785,33 @@ html {
   align-items: flex-start;
   height: 98rem;
 }
+.contact__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.contact__image-container {
+  position: relative;
+  flex: 1;
+  max-width: 50%;
+}
+.contact__title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+}
+.contact__image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 .contact__form {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 22px 0 rgba(170, 171, 188, 0.37);
@@ -792,7 +820,7 @@ html {
   border-radius: 10px;
   max-width: 50rem;
   width: 100%;
-  padding: 2.5rem 2.5rem 3rem;
+  padding: 5.5rem 2.5rem 3rem;
   border-radius: 0.8rem;
   color: white;
   margin: 10rem 2.5rem 2.5rem 2.5rem;
