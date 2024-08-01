@@ -46,6 +46,9 @@ const Contact = () => {
             <div className='contact__container'>
                 <div className='contact__image-container'>
                     <h1 className='contact__title'>Let's Collaborate!</h1>
+                    <h2>linkedin link</h2>
+                    <h2>github</h2>
+                    <h2>Phone number</h2>
                     <img src="https://static.vecteezy.com/system/resources/previews/004/257/968/non_2x/abstract-purple-fluid-wave-background-free-vector.jpg" alt="Abstract Background" className='contact__image' />
                 </div>
                 <form onSubmit={onSubmit} className='contact__form'>
