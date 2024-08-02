@@ -152,7 +152,12 @@
             padding: 1rem 1rem 1rem 1.5rem ;
         }
 
-        
+        &__title-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 2.5rem;
+        }
 
         &__title {
             margin: 0;
@@ -162,7 +167,12 @@
 
         &__subtitle {
             margin: 0;
+            font-size: 1.3rem;
             color: #bbb;
+        }
+
+        &__description {
+            margin-top: 1rem;
         }
 
         &__date-left {

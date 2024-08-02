@@ -51,10 +51,12 @@ const Experience = () => {
                     <div className='timeline__content-container'>
                     <div className={`timeline__date ${index % 2 === 0 ? 'timeline__date-left' : 'timeline__date-right'}`}>{element.date}</div>
                     <div className={`timeline__content ${index % 2 === 0 ? 'timeline__content-left' : 'timeline__content-right'}`}>
+                        <div className='timeline__title-container'>
                         <h3 className="timeline__title">{element.title}</h3>
                         <h4 className="timeline__subtitle">{element.location}</h4>
-                        <p>{element.description}</p>
-                        <button>{element.buttonText}</button>
+                        </div>
+                        <p className='timeline__description'>{element.description}</p>
+                        
                     </div>
                 </div>
                 </div>

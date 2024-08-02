@@ -33,6 +33,31 @@
         margin-top: 5rem;
     }
 
+    &__link-container {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 5rem;
+        top: 40%;
+    }
+
+    &__link-github {
+        
+    }
+
+    &__link-linkedin {
+       
+    }
+
+    &__contact-number {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
     &__image {
         width: 100%;
         max-width: 50rem;

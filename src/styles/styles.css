@@ -431,13 +431,23 @@ html {
   border-radius: 0rem 2rem 2rem 2rem;
   padding: 1rem 1rem 1rem 1.5rem;
 }
+.timeline__title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 2.5rem;
+}
 .timeline__title {
   margin: 0;
   font-size: 2rem;
 }
 .timeline__subtitle {
   margin: 0;
+  font-size: 1.3rem;
   color: #bbb;
+}
+.timeline__description {
+  margin-top: 1rem;
 }
 .timeline__date-left {
   color: #ffffff;
@@ -810,6 +820,20 @@ html {
   z-index: 1;
   width: 100%;
   margin-top: 5rem;
+}
+.contact__link-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5rem;
+  top: 40%;
+}
+.contact__contact-number {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .contact__image {
   width: 100%;
