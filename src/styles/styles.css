@@ -476,12 +476,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 30%;
+  width: 80%;
   gap: 3rem;
 }
 .projects__card {
   display: flex;
-  flex-direction: column;
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 22px 0 rgba(170, 171, 188, 0.37);
@@ -490,10 +489,18 @@ html {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.projects__info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+}
 .projects__header-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
   align-items: center;
 }
 .projects__title {
@@ -509,7 +516,9 @@ html {
 .projects__tech-stack {
   list-style: none;
   display: flex;
-  width: 80%;
+  justify-content: flex-end;
+  height: 3rem;
+  width: 50%;
   gap: 1rem;
   margin: 1rem 0 1rem 2rem;
 }
@@ -521,24 +530,7 @@ html {
   padding: 0.3rem;
   border-radius: 5rem;
   color: rgb(255, 255, 255);
-}
-.projects #tech-css {
-  background-color: #264de4;
-}
-.projects #tech-react {
-  background-color: #61DAFB;
-}
-.projects #tech-mongodb {
-  background-color: #47A248;
-}
-.projects #tech-jwt {
-  background-color: #00C7B7;
-}
-.projects #tech-scss {
-  background-color: #CC6699;
-}
-.projects #tech-expressjs {
-  background-color: #000000;
+  background-color: rgb(143, 0, 255);
 }
 .projects__description {
   color: rgb(255, 255, 255);
@@ -546,8 +538,7 @@ html {
   font-size: 1.2rem;
 }
 .projects__image {
-  width: 100%;
-  height: 30%;
+  width: 40%;
 }
 .projects__button-container {
   display: flex;
@@ -640,7 +631,7 @@ html {
 }
 
 .Tilt {
-  transition: transform 0.5s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 .svg-container-large {
