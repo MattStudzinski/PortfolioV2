@@ -6,26 +6,42 @@
     gap: 3rem;
     padding-top: 8rem;
     
-    
-
     &__card-container {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 5rem;
         width: 80%;
-        gap: 3rem;
     }
 
-    &__card{
+    &__card {
         display: flex;
-        
         width: 100%;
-        background: rgba( 255, 255, 255, 0.2 );
+        background: rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 22px 0 rgba(170, 171, 188, 0.37);
-        backdrop-filter: blur( 2.5px );
-        -webkit-backdrop-filter: blur( 2.5px );
+        backdrop-filter: blur(2.5px);
+        -webkit-backdrop-filter: blur(2.5px);
         border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        &--inverse {
+            flex-direction: row-reverse;
+
+            .projects__image {
+                width: 40%;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+        transition: clip-path 0.3s ease;
+
+        &:hover {
+            clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+        }
     }
 
     &__info-container {
@@ -37,9 +53,7 @@
         justify-content: space-between;
     }
 
-    
-
-    &__header-container{
+    &__header-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -49,14 +63,13 @@
     &__title {
         font-size: 2.3rem;
         color: $text;
-
     }
 
-    &__year {
-        background-color: $primary;
-        padding: .5rem;
-        border-radius: .8rem;
-        color: $text;
+    &__subtitle {
+        font-size: 1.3rem;
+        color: $text-grey;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $text-grey;
     }
 
     &__tech-stack {
@@ -73,24 +86,31 @@
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 7rem;
-        padding: .3rem;
+        padding: 0.3rem;
         border-radius: 5rem;
         color: $text;
         background-color: $primary;
     }
 
-    
     &__description {
         color: $text;
-        
         padding: 1rem;
         font-size: 1.2rem;
     }
 
     &__image {
         width: 40%;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        transition: clip-path 0.3s ease;
+
+        &:hover {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
     }
+
+    
 
     &__button-container {
         display: flex;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tilt} from 'react-tilt';
+
 
 
 const Projects = () => {
@@ -12,6 +12,34 @@ const Projects = () => {
 
             <div>
                 <article className='projects__card'>
+                <img className='projects__image' src='https://bloggingwizard.com/wp-content/uploads/2021/06/envato-elements-Best-Stock-Photo-Sites.png' alt='Project'/>
+                    <div className='projects__info-container'>
+                        <div className='projects__body-container'>
+                        <div className='projects__header-container'>
+                    <h1 className='projects__title'>Task Trove</h1>
+                        
+                    
+                    <ul className='projects__tech-stack'>
+                        <li className='projects__tech' >CSS</li>
+                        <li className='projects__tech' >React</li>
+                        <li className='projects__tech' >MongoDB</li>
+                    </ul>
+                    </div>
+                    <h3 className='projects__subtitle'>Issue tracking application</h3>
+                    <div className='projects__description'>This is where the project description goes, lets keep it to a few lines and i am going to type out a few lines here to act as an example for future descriptions so lets be careful about how much we share!</div>
+                    </div>
+
+                    <div className='projects__button-container'>
+                        <a href='#' className='projects__live-button'>View Deployed</a>
+                        <a href='#' className='projects__code-button'>Github</a>
+                    </div>
+                    </div>
+                    
+                    
+                </article>
+            </div>
+            <div>
+                <article className='projects__card projects__card--inverse'>
                 <img className='projects__image' src='https://bloggingwizard.com/wp-content/uploads/2021/06/envato-elements-Best-Stock-Photo-Sites.png' alt='Project'/>
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
