@@ -95,6 +95,16 @@
     transform: translateX(0);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -470,7 +480,7 @@ html {
   width: 100%;
   justify-content: center;
   gap: 3rem;
-  padding-top: 8rem;
+  padding-top: 10rem;
 }
 .projects__card-container {
   display: flex;
@@ -488,6 +498,11 @@ html {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.projects__card--visible {
+  animation: fadeIn 0.5s forwards;
 }
 .projects__card:hover {
   transform: scale(1.05);

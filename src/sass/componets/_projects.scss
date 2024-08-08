@@ -4,7 +4,7 @@
     width: 100%;
     justify-content: center;
     gap: 3rem;
-    padding-top: 8rem;
+    padding-top: 10rem;
     
     &__card-container {
         display: flex;
@@ -23,6 +23,12 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+        &--visible {
+            animation: fadeIn 0.5s forwards; 
+        }
 
         &:hover {
             transform: scale(1.05);
