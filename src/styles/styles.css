@@ -98,7 +98,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(2rem);
+    transform: translateY(20rem);
   }
   to {
     opacity: 1;
@@ -200,40 +200,73 @@ html {
 .about {
   display: flex;
   color: rgb(255, 255, 255);
-  width: 75%;
-  max-width: 90%;
+  max-width: 100%;
   height: 74rem;
   justify-content: center;
   align-items: center;
   padding-bottom: 15rem;
 }
+@media (max-width: 420px) {
+  .about {
+    padding-left: 1rem;
+  }
+}
 .about__container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .about__name {
   animation: nameSlide 1.6s ease-in-out;
   font-size: 5rem;
+}
+@media (max-width: 420px) {
+  .about__name {
+    font-size: 2rem;
+  }
 }
 .about__title {
   animation: titleSlide 1.6s ease-in-out;
   display: flex;
   font-size: 4.5rem;
 }
+@media (max-width: 420px) {
+  .about__title {
+    font-size: 2rem;
+  }
+}
 .about__role {
   color: rgb(143, 0, 255);
   font-size: 4.5rem;
+}
+@media (max-width: 420px) {
+  .about__role {
+    font-size: 2rem;
+  }
 }
 .about__bio {
   width: 71rem;
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
+@media (max-width: 420px) {
+  .about__bio {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
 .about__navigation {
   margin: 1rem 0 0 2rem;
   display: flex;
   width: 50%;
   gap: 3rem;
+}
+@media (max-width: 420px) {
+  .about__navigation {
+    width: 100%;
+    gap: 0.9rem;
+    margin-left: 0;
+  }
 }
 .about__navigation-link {
   color: rgb(143, 0, 255);
@@ -247,6 +280,12 @@ html {
   text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.25em currentColor;
   box-shadow: 0 0 1em 0 rgb(143, 0, 255), inset 0 0 1em 0 rgb(143, 0, 255);
   position: relative;
+}
+@media (max-width: 420px) {
+  .about__navigation-link {
+    font-size: 1.4rem;
+    padding: 0.25em 0.5em;
+  }
 }
 .about__navigation-link:before {
   pointer-events: none;
@@ -296,6 +335,12 @@ html {
   display: flex;
   padding-right: 5rem;
   margin-top: 3rem;
+}
+@media (max-width: 420px) {
+  .nav-bar {
+    padding-right: 5%;
+    margin-top: 1.5rem;
+  }
 }
 .nav-bar__links {
   display: flex;
@@ -450,6 +495,7 @@ html {
 .timeline__title {
   margin: 0;
   font-size: 2rem;
+  border-bottom: 1px solid rgb(40, 40, 40);
 }
 .timeline__subtitle {
   margin: 0;
@@ -457,12 +503,12 @@ html {
   color: #bbb;
 }
 .timeline__description {
-  margin-top: 1rem;
+  margin: 1rem;
 }
 .timeline__date-left {
   color: #ffffff;
   font-size: 1.4rem;
-  margin: 0 0 1rem 3.5rem;
+  margin: 0 0 1rem 2rem;
 }
 .timeline__date-right {
   color: #ffffff;
@@ -499,10 +545,10 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
 .projects__card--visible {
-  animation: fadeIn 0.5s forwards;
+  animation: fadeIn 0.8s forwards;
 }
 .projects__card:hover {
   transform: scale(1.05);

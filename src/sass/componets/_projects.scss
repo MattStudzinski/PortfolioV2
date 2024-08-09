@@ -24,10 +24,10 @@
         border: 1px solid rgba(255, 255, 255, 0.18);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         opacity: 0;
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        transition: opacity 1s ease-out, transform 0.5s ease-out;
 
         &--visible {
-            animation: fadeIn 0.5s forwards; 
+            animation: fadeIn .8s forwards; 
         }
 
         &:hover {

@@ -6,6 +6,10 @@
     padding-right: 5rem;
     margin-top: 3rem;
     
+    @media(max-width: 420px){
+        padding-right: 5%;
+        margin-top: 1.5rem;
+    }
 
     &__links {
         display: flex;
