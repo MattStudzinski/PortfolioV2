@@ -209,6 +209,7 @@ html {
 @media (max-width: 420px) {
   .about {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .about__container {
@@ -367,6 +368,11 @@ html {
   position: relative;
   padding: 50px 0;
 }
+@media (max-width: 420px) {
+  .timeline__container {
+    width: 95%;
+  }
+}
 .timeline__line {
   position: absolute;
   left: 50%;
@@ -389,6 +395,11 @@ html {
   margin-left: 50%;
   flex-direction: column;
   text-align: left;
+}
+@media (max-width: 420px) {
+  .timeline__element-left {
+    height: 40rem;
+  }
 }
 .timeline__element-left::before {
   content: "";
@@ -477,6 +488,12 @@ html {
   border-radius: 2rem 0rem 2rem 2rem;
   padding: 1rem 1rem 1rem 1.5rem;
 }
+@media (max-width: 420px) {
+  .timeline__content-left {
+    margin: 0 1rem 0 0;
+    height: 100%;
+  }
+}
 .timeline__content-right {
   background-color: rgb(85, 85, 85);
   box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.37);
@@ -492,18 +509,41 @@ html {
   justify-content: space-between;
   padding-right: 2.5rem;
 }
+@media (max-width: 420px) {
+  .timeline__title-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-start;
+  }
+}
 .timeline__title {
   margin: 0;
   font-size: 2rem;
   border-bottom: 1px solid rgb(40, 40, 40);
 }
+@media (max-width: 420px) {
+  .timeline__title {
+    font-size: 1.4rem;
+  }
+}
 .timeline__subtitle {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #bbb;
+}
+@media (max-width: 420px) {
+  .timeline__subtitle {
+    padding: 0.5rem 1rem;
+  }
 }
 .timeline__description {
   margin: 1rem;
+}
+@media (max-width: 420px) {
+  .timeline__description {
+    margin: 0;
+  }
 }
 .timeline__date-left {
   color: #ffffff;
