@@ -22,6 +22,14 @@ border: 1px solid $primary;
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 720px) {
+        width: 8rem;
+        height: 8rem;
+        margin: .4rem;
+        padding: .4rem;
+        
+    }
 }
 .svg-container-medium {
     animation: float2 3s ease-in-out infinite;
@@ -42,6 +50,14 @@ border: 1px solid $primary;
     border-radius: 1rem;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 720px) {
+        width: 6.8rem;
+        height: 6.8rem;
+        margin: .4rem;
+        padding: .4rem;
+    }
+
 }
 .svg-container-small {
     animation: float3 3s ease-in-out infinite;
@@ -61,6 +77,13 @@ border: 1px solid $primary;
     width: 11rem;
     height:11rem;
     border-radius: 1rem;
+
+    @media (max-width: 720px) {
+        width: 6rem;
+        height: 6rem;
+        margin: .4rem;
+        padding: .4rem;
+    }
 }
 
 
@@ -119,6 +142,10 @@ border: 1px solid $primary;
         font-size: 1.4rem;
         margin-top: .5rem;
         color: white;
+
+        @media (max-width: 720px) {
+            font-size: 1rem;
+        }
     }
 
     .skills__item {

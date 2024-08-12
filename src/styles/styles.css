@@ -246,7 +246,7 @@ html {
   }
 }
 .about__bio {
-  width: 71rem;
+  max-width: 71rem;
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
@@ -810,6 +810,14 @@ html {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 720px) {
+  .svg-container-large {
+    width: 8rem;
+    height: 8rem;
+    margin: 0.4rem;
+    padding: 0.4rem;
+  }
+}
 
 .svg-container-medium {
   animation: float2 3s ease-in-out infinite;
@@ -831,6 +839,14 @@ html {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 720px) {
+  .svg-container-medium {
+    width: 6.8rem;
+    height: 6.8rem;
+    margin: 0.4rem;
+    padding: 0.4rem;
+  }
+}
 
 .svg-container-small {
   animation: float3 3s ease-in-out infinite;
@@ -848,6 +864,14 @@ html {
   width: 11rem;
   height: 11rem;
   border-radius: 1rem;
+}
+@media (max-width: 720px) {
+  .svg-container-small {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.4rem;
+    padding: 0.4rem;
+  }
 }
 
 .skills {
@@ -891,6 +915,11 @@ html {
   font-size: 1.4rem;
   margin-top: 0.5rem;
   color: white;
+}
+@media (max-width: 720px) {
+  .skills__title {
+    font-size: 1rem;
+  }
 }
 .skills .skills__item {
   opacity: 0;
