@@ -401,6 +401,15 @@ html {
   flex-direction: column;
   text-align: left;
 }
+@media (max-width: 720px) {
+  .timeline__element-left {
+    height: 40rem;
+    transform: translateX(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-left: 9%;
+    width: 89.3%;
+  }
+}
 .timeline__element-left::before {
   content: "";
   position: absolute;
@@ -423,6 +432,11 @@ html {
 .timeline__element-left:nth-child(even) {
   margin-left: 0;
   margin-right: 50%;
+}
+@media (max-width: 720px) {
+  .timeline__element-left:nth-child(even) {
+    margin-right: 0;
+  }
 }
 .timeline__element-left.visible {
   opacity: 1;
@@ -456,6 +470,8 @@ html {
     height: 40rem;
     transform: translateX(40px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-left: 9%;
+    width: 89.3%;
   }
 }
 .timeline__element-right::before {
@@ -499,6 +515,7 @@ html {
     height: 40rem;
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-left: 9%;
   }
 }
 .timeline__icon {

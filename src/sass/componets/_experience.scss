@@ -49,6 +49,14 @@
         flex-direction: column;
         text-align: left; 
 
+        @media (max-width: 720px) {
+            height: 40rem;
+            transform: translateX(40px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 9%;
+            width: 89.3%;
+        }
+
 
 
         &::before {
@@ -76,6 +84,10 @@
         &:nth-child(even) {
             margin-left: 0;
             margin-right: 50%;
+
+            @media (max-width: 720px) {
+                margin-right: 0;
+            }
         }
 
         &.visible {
@@ -111,6 +123,8 @@
             height: 40rem;
             transform: translateX(40px);
             transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 9%;
+            width: 89.3%;
         }
 
         &::before {
@@ -159,6 +173,7 @@
             height: 40rem;
             transform: translateX(0);  // No translation, start at final position
             transition: opacity 0.5s ease, transform 0.5s ease;  // Smooth transition
+            margin-left: 9%;
         }
     }
 
