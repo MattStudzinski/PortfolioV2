@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import WorkIcon from "../svg/workIcon.png";
 import timelineElements from '../TimelineElement';
 
 

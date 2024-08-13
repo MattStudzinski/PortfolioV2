@@ -440,7 +440,7 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  height: 40rem;
+  height: 20rem;
   opacity: 0;
   transform: translateX(40px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -450,6 +450,13 @@ html {
   margin-left: 50%;
   flex-direction: column;
   text-align: left;
+}
+@media (max-width: 720px) {
+  .timeline__element-right {
+    height: 40rem;
+    transform: translateX(40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
 }
 .timeline__element-right::before {
   content: "";
@@ -484,6 +491,14 @@ html {
     height: 40rem;
     margin-right: 0;
     width: 89.3%;
+  }
+}
+@media (max-width: 720px) {
+  .timeline .timeline__element-left,
+  .timeline .timeline__element-right {
+    height: 40rem;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 }
 .timeline__icon {
@@ -879,24 +894,32 @@ html {
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 80rem;
+  height: 100rem;
 }
 .skills__container {
   display: flex;
-  width: 80%;
+  width: 90%;
   justify-content: center;
   align-items: center;
 }
+.skills__item-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
 .skills__main-skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .skills__secondary-skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .skills__aux-skills {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .skills__icon-small {
