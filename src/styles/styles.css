@@ -701,7 +701,7 @@ html {
 
 .projects {
   display: flex;
-  height: 135rem;
+  height: 115rem;
   width: 100%;
   justify-content: center;
   gap: 3rem;
@@ -716,6 +716,8 @@ html {
 @media (max-width: 720px) {
   .projects__card-container {
     width: 90%;
+    justify-content: center;
+    align-items: center;
   }
 }
 .projects__card {
@@ -734,6 +736,7 @@ html {
 @media (max-width: 720px) {
   .projects__card {
     flex-direction: column;
+    max-width: 40rem;
   }
 }
 .projects__card--visible {
