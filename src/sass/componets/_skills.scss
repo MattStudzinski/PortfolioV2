@@ -24,8 +24,8 @@ border: 1px solid $primary;
     align-items: center;
 
     @media (max-width: 720px) {
-        width: 8rem;
-        height: 8rem;
+        width: 10rem;
+        height: 10rem;
         margin: .4rem;
         padding: .4rem;
         
@@ -52,8 +52,8 @@ border: 1px solid $primary;
     align-items: center;
 
     @media (max-width: 720px) {
-        width: 6.8rem;
-        height: 6.8rem;
+        width: 8rem;
+        height: 8rem;
         margin: .4rem;
         padding: .4rem;
     }
@@ -79,8 +79,8 @@ border: 1px solid $primary;
     border-radius: 1rem;
 
     @media (max-width: 720px) {
-        width: 6rem;
-        height: 6rem;
+        width: 7rem;
+        height: 7rem;
         margin: .4rem;
         padding: .4rem;
     }
@@ -98,7 +98,7 @@ border: 1px solid $primary;
 
     &__container {
         display: flex;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }

@@ -166,6 +166,11 @@ html {
   opacity: 0;
   border-radius: 50rem;
 }
+@media (max-width: 720px) {
+  .sticky-navigation {
+    width: 90%;
+  }
+}
 .sticky-navigation.visible {
   top: 0;
   opacity: 1;
@@ -188,12 +193,17 @@ html {
   position: relative;
   background: none;
 }
+@media (max-width: 720px) {
+  .sticky-navigation .sticky-navigation-link {
+    font-size: 1.2rem;
+  }
+}
 .sticky-navigation .sticky-navigation-link:hover {
   background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transform: scale(1.2);
+  transform: scale(1.1);
   letter-spacing: 0.2rem;
 }
 
@@ -206,10 +216,17 @@ html {
   align-items: center;
   padding-bottom: 15rem;
 }
+@media (max-width: 720px) {
+  .about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 @media (max-width: 420px) {
   .about {
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 68rem;
   }
 }
 .about__container {
@@ -221,6 +238,21 @@ html {
   animation: nameSlide 1.6s ease-in-out;
   font-size: 5rem;
 }
+@media (max-width: 800px) {
+  .about__name {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 720px) {
+  .about__name {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 550px) {
+  .about__name {
+    font-size: 2.3rem;
+  }
+}
 @media (max-width: 420px) {
   .about__name {
     font-size: 2rem;
@@ -231,6 +263,21 @@ html {
   display: flex;
   font-size: 4.5rem;
 }
+@media (max-width: 800px) {
+  .about__title {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 720px) {
+  .about__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 550px) {
+  .about__title {
+    font-size: 2.3rem;
+  }
+}
 @media (max-width: 420px) {
   .about__title {
     font-size: 2rem;
@@ -239,6 +286,21 @@ html {
 .about__role {
   color: rgb(143, 0, 255);
   font-size: 4.5rem;
+}
+@media (max-width: 800px) {
+  .about__role {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 720px) {
+  .about__role {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 550px) {
+  .about__role {
+    font-size: 2.3rem;
+  }
 }
 @media (max-width: 420px) {
   .about__role {
@@ -250,7 +312,7 @@ html {
   margin-bottom: 2rem;
   font-size: 1.4rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .about__bio {
     width: 100%;
     margin-top: 2rem;
@@ -262,7 +324,7 @@ html {
   width: 50%;
   gap: 3rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .about__navigation {
     width: 100%;
     gap: 0.9rem;
@@ -281,6 +343,12 @@ html {
   text-shadow: 0 0 0.125em hsla(0, 0%, 100%, 0.3), 0 0 0.25em currentColor;
   box-shadow: 0 0 1em 0 rgb(143, 0, 255), inset 0 0 1em 0 rgb(143, 0, 255);
   position: relative;
+}
+@media (max-width: 720px) {
+  .about__navigation-link {
+    font-size: 1.6rem;
+    padding: 0.35em 0.7em;
+  }
 }
 @media (max-width: 420px) {
   .about__navigation-link {
@@ -621,6 +689,11 @@ html {
   font-size: 1.4rem;
   margin: 0 0 1rem 5rem;
 }
+@media (max-width: 720px) {
+  .timeline__date-right {
+    margin-left: 2rem;
+  }
+}
 .timeline:nth-child(even) .timeline__date {
   margin-right: 0;
   margin-left: 0;
@@ -640,6 +713,11 @@ html {
   gap: 5rem;
   width: 80%;
 }
+@media (max-width: 720px) {
+  .projects__card-container {
+    width: 90%;
+  }
+}
 .projects__card {
   display: flex;
   width: 100%;
@@ -653,6 +731,11 @@ html {
   opacity: 0;
   transition: opacity 1s ease-out, transform 0.5s ease-out;
 }
+@media (max-width: 720px) {
+  .projects__card {
+    flex-direction: column;
+  }
+}
 .projects__card--visible {
   animation: fadeIn 0.8s forwards;
 }
@@ -663,10 +746,22 @@ html {
 .projects__card--inverse {
   flex-direction: row-reverse;
 }
+@media (max-width: 720px) {
+  .projects__card--inverse {
+    flex-direction: column;
+  }
+}
 .projects__card--inverse .projects__image {
   width: 40%;
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
   transition: clip-path 0.3s ease;
+}
+@media (max-width: 720px) {
+  .projects__card--inverse .projects__image {
+    clip-path: none;
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
 .projects__card--inverse .projects__image:hover {
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
@@ -727,6 +822,13 @@ html {
 }
 .projects__image:hover {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+@media (max-width: 720px) {
+  .projects__image {
+    clip-path: none;
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
 .projects__button-container {
   display: flex;
@@ -844,8 +946,8 @@ html {
 }
 @media (max-width: 720px) {
   .svg-container-large {
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     margin: 0.4rem;
     padding: 0.4rem;
   }
@@ -873,8 +975,8 @@ html {
 }
 @media (max-width: 720px) {
   .svg-container-medium {
-    width: 6.8rem;
-    height: 6.8rem;
+    width: 8rem;
+    height: 8rem;
     margin: 0.4rem;
     padding: 0.4rem;
   }
@@ -899,8 +1001,8 @@ html {
 }
 @media (max-width: 720px) {
   .svg-container-small {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     margin: 0.4rem;
     padding: 0.4rem;
   }
@@ -915,7 +1017,7 @@ html {
 }
 .skills__container {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -1019,11 +1121,21 @@ html {
   margin-top: 10rem;
   width: 100%;
 }
+@media (max-width: 720px) {
+  .contact__container {
+    width: 90%;
+  }
+}
 .contact__image-container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 720px) {
+  .contact__image-container {
+    display: none;
+  }
 }
 .contact__title {
   position: absolute;
@@ -1067,10 +1179,15 @@ html {
   -webkit-backdrop-filter: blur(2.5px);
   max-width: 50rem;
   width: 100%;
-  padding: 5.5rem 2.5rem 3rem;
+  padding: 2.5rem 2.5rem 3rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   color: white;
+}
+@media (max-width: 720px) {
+  .contact__form {
+    border-radius: 1rem;
+  }
 }
 .contact__form-title {
   font-size: 3rem;
@@ -1094,6 +1211,9 @@ html {
   font-size: 1.2rem;
   color: white;
   margin-top: 0.8rem;
+}
+.contact__form-input::placeholder {
+  color: rgb(255, 255, 255);
 }
 .contact__form-send-button {
   position: relative;

@@ -19,6 +19,10 @@
     opacity: 0;
     border-radius: 50rem;
 
+    @media (max-width: 720px) {
+        width: 90%;
+    }
+
     &.visible {
         top: 0; 
         opacity: 1;
@@ -42,13 +46,17 @@
         transition: all 0.3s ease-in-out; 
         position: relative;
         background: none;
+
+        @media (max-width: 720px) {
+            font-size: 1.2rem;
+        }
       
         &:hover {
             background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            transform: scale(1.2); 
+            transform: scale(1.1); 
             letter-spacing: 0.2rem; 
             
         }

@@ -11,6 +11,10 @@
         flex-direction: column;
         gap: 5rem;
         width: 80%;
+
+        @media (max-width: 720px) {
+            width: 90%;
+        }
     }
 
     &__card {
@@ -26,8 +30,15 @@
         opacity: 0;
         transition: opacity 1s ease-out, transform 0.5s ease-out;
 
+        @media (max-width: 720px) {
+            flex-direction: column;
+            
+        }
+
         &--visible {
             animation: fadeIn .8s forwards; 
+
+            
         }
 
         &:hover {
@@ -38,10 +49,21 @@
         &--inverse {
             flex-direction: row-reverse;
 
+            @media (max-width: 720px) {
+                flex-direction: column;
+                
+            }
+
             .projects__image {
                 width: 40%;
         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
         transition: clip-path 0.3s ease;
+
+        @media (max-width: 720px) {
+            clip-path: none;
+            width: 100%;
+            border-radius: 1rem;
+        }
 
         &:hover {
             clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
@@ -113,6 +135,12 @@
 
         &:hover {
             clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+
+        @media (max-width: 720px) {
+            clip-path: none;
+            width: 100%;
+            border-radius: 1rem;
         }
     }
 
