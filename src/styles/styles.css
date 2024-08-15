@@ -492,12 +492,18 @@ html {
 @media (max-width: 720px) {
   .timeline__element-left:nth-child(even)::before {
     right: auto;
-    left: -32.5px;
+    left: -33px;
   }
 }
 .timeline__element-left:nth-child(even) {
   margin-left: 0;
   margin-right: 50%;
+}
+@media (max-width: 720px) {
+  .timeline__element-left:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .timeline__element-left.visible {
   opacity: 1;
@@ -530,24 +536,24 @@ html {
   .timeline__element-right {
     height: 40rem;
     transform: translateX(40px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    margin-left: 9%;
     width: 89.3%;
   }
 }
 .timeline__element-right::before {
   content: "";
   position: absolute;
-  left: -8.9px;
   top: 20px;
   width: 18px;
   height: 18px;
   background: rgb(143, 0, 255);
   border-radius: 50%;
+  right: auto;
+  left: -8.9px;
 }
 @media (max-width: 720px) {
   .timeline__element-right::before {
-    left: -8.3%;
+    right: auto;
+    left: -33px;
   }
 }
 .timeline__element-right:nth-child(even)::before {
@@ -555,8 +561,14 @@ html {
   right: -8.9px;
 }
 .timeline__element-right:nth-child(even) {
-  margin-left: 0;
-  margin-right: 50%;
+  margin-left: 50%;
+  margin-right: 0%;
+}
+@media (max-width: 720px) {
+  .timeline__element-right:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .timeline__element-right.visible {
   opacity: 1;
@@ -564,9 +576,9 @@ html {
 }
 @media (max-width: 720px) {
   .timeline__element-right.visible {
-    margin-left: 9%;
     height: 40rem;
-    margin-right: 0;
+    margin: 0;
+    margin-bottom: 2rem;
     width: 89.3%;
   }
 }
@@ -606,7 +618,7 @@ html {
   border-radius: 2rem 0rem 2rem 2rem;
   padding: 1rem 1rem 1rem 1.5rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .timeline__content-left {
     margin: 0 1rem 0 0;
     height: 100%;
@@ -622,7 +634,7 @@ html {
   border-radius: 0rem 2rem 2rem 2rem;
   padding: 1rem 1rem 1rem 1.5rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .timeline__content-right {
     margin: 0 1rem 0 0;
     height: 100%;
