@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     position: relative;
-    padding: 50px 0; 
+    padding: 5rem 0; 
 
     &__container {
         display: flex;
@@ -13,7 +13,7 @@
     align-items: center;
     width: 70%;
     position: relative;
-    padding: 50px 0;
+    padding: 5rem 0;
 
     @media(max-width: 420px) {
         width: 95%;
@@ -23,7 +23,7 @@
     &__line {
         position: absolute;
         left: 50%;
-        width: 4px;
+        width: .4rem;
         height: 100%;
         background: $primary;
         transform: translateX(-50%);
@@ -48,57 +48,52 @@
         margin-left: 50%; 
         flex-direction: column;
         text-align: left; 
-
+    
         @media (max-width: 720px) {
             height: 40rem;
-            transform: translateX(40px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            margin-left: 9%;
-            width: 89.3%;
+            transform: translateX(40px); // Move element to the right for smaller screens
+            width: 89.3%; 
         }
-
-
-
+    
         &::before {
             content: '';
-            position: absolute;
-            left: -8.9px; 
+            position: absolute; 
             top: 20px; 
             width: 18px;
             height: 18px;
             background: $primary;
             border-radius: 50%;
-            
         }
-
+    
         &:nth-child(even)::before {
             left: auto;
-            right: -8.9px; 
-
+            right: -8.9px;
+    
             @media(max-width: 720px) {
-                left: -8.3%;
+                right: auto;
+                left: -32.5px;
             }
         }
-
-
+    
         &:nth-child(even) {
             margin-left: 0;
             margin-right: 50%;
-
+    
             @media (max-width: 720px) {
-                margin-right: 0;
+                
             }
         }
-
+    
         &.visible {
             opacity: 1;
             transform: translateY(0);
-
+    
             @media(max-width: 720px) {
-                margin-left: 9%;
                 height: 40rem;
-                margin-right: 0;
                 width: 89.3%;
+                margin: 0;
+                margin-bottom: 2rem;
+
             }
         }
     }
@@ -170,10 +165,9 @@
     @media (max-width: 720px) {
         .timeline__element-left,
         .timeline__element-right {
-            height: 40rem;
-            transform: translateX(0);  // No translation, start at final position
-            transition: opacity 0.5s ease, transform 0.5s ease;  // Smooth transition
-            margin-left: 9%;
+            transform: translateX(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 45px;
         }
     }
 

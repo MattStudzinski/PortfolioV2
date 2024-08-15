@@ -5,6 +5,9 @@
     justify-content: center;
     gap: 3rem;
     padding-top: 10rem;
+    @media (max-width: 720px) {
+        height: 135rem;
+    }
     
     &__card-container {
         display: flex;
@@ -14,8 +17,9 @@
 
         @media (max-width: 720px) {
             width: 90%;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
+            height: 130rem;
         }
     }
 

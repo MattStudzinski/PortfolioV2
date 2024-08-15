@@ -10,11 +10,9 @@
         align-items: stretch;
         justify-content: center;
         margin-top: 10rem;
-        width: 100%;
+        width: 90%;
 
-        @media (max-width: 720px) {
-            width: 90%;
-        }
+        
     }
 
     &__image-container {
@@ -22,6 +20,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 50%;
 
         @media (max-width: 720px) {
             display: none;
@@ -82,7 +81,7 @@
         backdrop-filter: blur(2.5px);
         -webkit-backdrop-filter: blur(2.5px);
         max-width: 50rem;
-        width: 100%;
+        width: 50%;
         padding: 2.5rem 2.5rem 3rem;
         border-top-right-radius: 1rem;
         border-bottom-right-radius: 1rem ;
@@ -90,6 +89,7 @@
 
         @media(max-width: 720px) {
             border-radius: 1rem;
+            width: 80%;
         }
     }
 

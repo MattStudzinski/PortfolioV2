@@ -426,7 +426,7 @@ html {
   justify-content: center;
   width: 100%;
   position: relative;
-  padding: 50px 0;
+  padding: 5rem 0;
 }
 .timeline__container {
   display: flex;
@@ -434,7 +434,7 @@ html {
   align-items: center;
   width: 70%;
   position: relative;
-  padding: 50px 0;
+  padding: 5rem 0;
 }
 @media (max-width: 420px) {
   .timeline__container {
@@ -444,7 +444,7 @@ html {
 .timeline__line {
   position: absolute;
   left: 50%;
-  width: 4px;
+  width: 0.4rem;
   height: 100%;
   background: rgb(143, 0, 255);
   transform: translateX(-50%);
@@ -473,15 +473,12 @@ html {
   .timeline__element-left {
     height: 40rem;
     transform: translateX(40px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    margin-left: 9%;
     width: 89.3%;
   }
 }
 .timeline__element-left::before {
   content: "";
   position: absolute;
-  left: -8.9px;
   top: 20px;
   width: 18px;
   height: 18px;
@@ -494,17 +491,13 @@ html {
 }
 @media (max-width: 720px) {
   .timeline__element-left:nth-child(even)::before {
-    left: -8.3%;
+    right: auto;
+    left: -32.5px;
   }
 }
 .timeline__element-left:nth-child(even) {
   margin-left: 0;
   margin-right: 50%;
-}
-@media (max-width: 720px) {
-  .timeline__element-left:nth-child(even) {
-    margin-right: 0;
-  }
 }
 .timeline__element-left.visible {
   opacity: 1;
@@ -512,10 +505,10 @@ html {
 }
 @media (max-width: 720px) {
   .timeline__element-left.visible {
-    margin-left: 9%;
     height: 40rem;
-    margin-right: 0;
     width: 89.3%;
+    margin: 0;
+    margin-bottom: 2rem;
   }
 }
 .timeline__element-right {
@@ -580,10 +573,9 @@ html {
 @media (max-width: 720px) {
   .timeline .timeline__element-left,
   .timeline .timeline__element-right {
-    height: 40rem;
     transform: translateX(0);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    margin-left: 9%;
+    margin-left: 45px;
   }
 }
 .timeline__icon {
@@ -707,6 +699,11 @@ html {
   gap: 3rem;
   padding-top: 10rem;
 }
+@media (max-width: 720px) {
+  .projects {
+    height: 135rem;
+  }
+}
 .projects__card-container {
   display: flex;
   flex-direction: column;
@@ -716,8 +713,9 @@ html {
 @media (max-width: 720px) {
   .projects__card-container {
     width: 90%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    height: 130rem;
   }
 }
 .projects__card {
@@ -1014,9 +1012,10 @@ html {
 .skills {
   display: flex;
   width: 100%;
-  align-items: center;
+  padding: 12rem 0 0 0;
+  align-items: flex-start;
   justify-content: center;
-  height: 100rem;
+  height: 80rem;
 }
 .skills__container {
   display: flex;
@@ -1122,18 +1121,14 @@ html {
   align-items: stretch;
   justify-content: center;
   margin-top: 10rem;
-  width: 100%;
-}
-@media (max-width: 720px) {
-  .contact__container {
-    width: 90%;
-  }
+  width: 90%;
 }
 .contact__image-container {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
 }
 @media (max-width: 720px) {
   .contact__image-container {
@@ -1181,7 +1176,7 @@ html {
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
   max-width: 50rem;
-  width: 100%;
+  width: 50%;
   padding: 2.5rem 2.5rem 3rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -1190,6 +1185,7 @@ html {
 @media (max-width: 720px) {
   .contact__form {
     border-radius: 1rem;
+    width: 80%;
   }
 }
 .contact__form-title {
