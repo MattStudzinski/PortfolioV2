@@ -11,7 +11,8 @@
         display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
+    width: 90%;
+    max-width: 110rem;
     position: relative;
     padding: 5rem 0;
 
@@ -208,11 +209,13 @@
             height: 100%;
             border-radius: 2rem 0rem 2rem 2rem;
             padding: 1rem 1rem 1rem 1.5rem ;
+            
 
             @media(max-width: 720px) {
                 margin: 0 1rem 0 0;
                 height: 100%;
                 border-radius: 0rem 2rem 2rem 2rem;
+                max-width: 35rem;
             }
         }
         &__content-right {
@@ -228,6 +231,7 @@
                 margin: 0 1rem 0 0;
                 height: 100%;
                 border-radius: 0rem 2rem 2rem 2rem;
+                max-width: 35rem;
             }
         }
 
