@@ -1,5 +1,9 @@
 import React from 'react';
 import Swal from 'sweetalert2'
+import ContactPhone from '../svg/ContactPhone';
+import ContactGit from '../svg/ContactGit';
+import CoontactLinkedin from '../svg/ContactLinked';
+import ContactLinkedin from '../svg/ContactLinked';
 
 const Contact = () => {
 
@@ -47,10 +51,10 @@ const Contact = () => {
                 <div className='contact__image-container'>
                     <h1 className='contact__title'>Let's Collaborate!</h1>
                     <div className='contact__link-container'>
-                    <h2 className='contact__link-github'>linkedin</h2>
-                    <h2 className='contact__link-linkedin'>github</h2>
+                    <a href='https://github.com/MattStudzinski' target='_blank' rel='noopener noreferrer'> <ContactGit /> </a>
+                    <a href= 'https://www.linkedin.com/in/mattstudzinski' target='_blank' rel='noopener noreferrer'> <ContactLinkedin /> </a>
                     </div>
-                    <h2 className='contact__contact-number'>Phone number</h2>
+                    <h2 className='contact__contact-number'><ContactPhone />(425) 231-9749</h2>
                     <img src="https://static.vecteezy.com/system/resources/previews/004/257/968/non_2x/abstract-purple-fluid-wave-background-free-vector.jpg" alt="Abstract Background" className='contact__image' />
                 </div>
                 <form onSubmit={onSubmit} className='contact__form'>

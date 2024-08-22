@@ -1222,14 +1222,23 @@ html {
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 5rem;
-  top: 40%;
+  gap: 7rem;
+  top: 35%;
 }
 .contact__contact-number {
   position: absolute;
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  color: rgb(255, 255, 255);
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.contact__contact-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contact__image {
   width: 100%;
