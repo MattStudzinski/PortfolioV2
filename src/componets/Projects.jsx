@@ -1,4 +1,6 @@
 import {useEffect} from 'react';
+import iturnerImage from '../svg/ITurner.png'
+import tasksyncImage from '../svg/TaskSync.png'
 
 
 
@@ -43,7 +45,7 @@ const Projects = () => {
 
             <div>
                 <article className='projects__card'>
-                <img className='projects__image' src='https://bloggingwizard.com/wp-content/uploads/2021/06/envato-elements-Best-Stock-Photo-Sites.png' alt='Project'/>
+                <img className='projects__image' src={tasksyncImage} alt='Project'/>
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
@@ -71,7 +73,7 @@ const Projects = () => {
             </div>
             <div>
                 <article className='projects__card projects__card--inverse'>
-                <img className='projects__image' src='https://bloggingwizard.com/wp-content/uploads/2021/06/envato-elements-Best-Stock-Photo-Sites.png' alt='Project'/>
+                <img className='projects__image' src={iturnerImage} alt='Project'/>
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
