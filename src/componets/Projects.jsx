@@ -63,8 +63,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='#' className='projects__live-button'>View Deployed</a>
-                        <a href='#' className='projects__code-button'>Github</a>
+                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__live-button'>View Deployed</a>
+                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__code-button'>Github</a>
                     </div>
                     </div>
                     
@@ -91,8 +91,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='#' className='projects__live-button'>View Deployed</a>
-                        <a href='#' className='projects__code-button'>Github</a>
+                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__live-button'>View Deployed</a>
+                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__code-button'>Github</a>
                     </div>
                     </div>
                     
