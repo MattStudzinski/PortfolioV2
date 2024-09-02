@@ -14,30 +14,35 @@ const Header = () => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: .4,
-        }
-
+            threshold: 0.4,
+        };
+    
+        // Capture the current ref value
+        const element = aboutRef.current;
+    
         const handleIntersection = (entries) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) {
-                    setShowStickeyNav(true)
+                    setShowStickeyNav(true);
                 } else {
-                    setShowStickeyNav(false)
+                    setShowStickeyNav(false);
                 }
-            })
+            });
+        };
+    
+        const observer = new IntersectionObserver(handleIntersection, observerOptions);
+    
+        if (element) {
+            observer.observe(element);
         }
-
-        const observer = new IntersectionObserver(handleIntersection, observerOptions)
-        if(aboutRef.current) {
-            observer.observe(aboutRef.current)
-        }
-
+    
+        // Cleanup function
         return () => {
-            if (aboutRef.current) {
-                observer.unobserve(aboutRef.current)
+            if (element) {
+                observer.unobserve(element);
             }
-        }
-    }, [])
+        };
+    }, []);
     return (
         <section className='header'>
             <StickyNav show={showStickyNav} />
