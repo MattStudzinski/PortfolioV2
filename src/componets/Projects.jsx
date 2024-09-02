@@ -49,7 +49,7 @@ const Projects = () => {
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
-                    <h1 className='projects__title'>Task Trove</h1>
+                    <h1 className='projects__title'>TaskSync</h1>
                         
                     
                     <ul className='projects__tech-stack'>
@@ -77,7 +77,7 @@ const Projects = () => {
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
-                    <h1 className='projects__title'>Task Trove</h1>
+                    <h1 className='projects__title'>InventoryTurner</h1>
                         
                     
                     <ul className='projects__tech-stack'>
