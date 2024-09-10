@@ -61,5 +61,13 @@
             
         }
       }
+      .sticky-navigation-link.active {
+        background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transform: scale(1.1);
+        letter-spacing: 0.2rem;
+    }
       
 }
