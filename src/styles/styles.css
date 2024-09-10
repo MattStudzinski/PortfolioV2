@@ -804,6 +804,11 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1000px) {
+  .projects__header-container {
+    flex-direction: column;
+  }
+}
 .projects__title {
   font-size: 2.3rem;
   color: rgb(255, 255, 255);
