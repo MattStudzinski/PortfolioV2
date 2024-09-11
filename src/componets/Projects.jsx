@@ -6,6 +6,33 @@ import tasksyncImage from '../svg/TaskSync.png'
 
 const Projects = () => {
 
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        }
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('projects__card--visible')
+                    observer.unobserve(entry.target)
+                }
+            })
+        }
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+        const cards = document.querySelectorAll('.projects__card')
+        cards.forEach(card => observer.observe(card))
+
+        return () => {
+            if(observer) {
+                cards.forEach(card => observer.unobserve(card))
+            }
+        }
+    }, [])
 
     
 
@@ -36,8 +63,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__live-button'>View Deployed</a>
-                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__code-button'>Github</a>
+                        <a href='#' className='projects__live-button'>View Deployed</a>
+                        <a href='#' className='projects__code-button'>Github</a>
                     </div>
                     </div>
                     
@@ -50,7 +77,7 @@ const Projects = () => {
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
-                    <h1 className='projects__title'>InventoryTurner</h1>
+                    <h1 className='projects__title'>Task Trove</h1>
                         
                     
                     <ul className='projects__tech-stack'>
@@ -64,8 +91,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__live-button'>View Deployed</a>
-                        <a href='https://www.linkedin.com/in/mattstudzinski' className='projects__code-button'>Github</a>
+                        <a href='#' className='projects__live-button'>View Deployed</a>
+                        <a href='#' className='projects__code-button'>Github</a>
                     </div>
                     </div>
                     
