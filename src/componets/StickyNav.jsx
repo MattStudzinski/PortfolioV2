@@ -1,11 +1,46 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
 const StickyNav = ({ show }) => {
     const [activeLink, setActiveLink] = useState('')
     
+    useEffect(() => {
+        const sectionIds = ['experience', 'skills', 'projects', 'contact']
+        const sections = sectionIds.map(id => document.getElementById(id))
 
+        const observer = new IntersectionObserver(
+            (entries) => {
+                let newActiveLink = ''
+                entries.forEach((entry) => {
+                    console.log('Entry:', entry)
+                    if(entry.isIntersecting) {
+                        newActiveLink = entry.target.id
+                    }
+                })
+
+                if (newActiveLink !== activeLink) {
+                    console.log('New Active Link:', newActiveLink)
+                    setActiveLink(newActiveLink)
+                }
+            },
+        {threshold: 0.5 }
+        )
+
+        sections.forEach((section) => {
+            if (section) observer.observe(section)
+        })
+
+        return () => {
+            sections.forEach((section) => {
+                if (section) observer.unobserve(section)
+            })
+        }
+    }, [activeLink])
+
+    useEffect(() => {
+        console.log('Active Link:', activeLink); // Log activeLink on each update
+    }, [activeLink]);
     
     const handleClick = (id) => {
         setActiveLink(id)
