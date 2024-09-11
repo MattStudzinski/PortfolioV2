@@ -5,6 +5,8 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 const Body = () => {
+
+    
     return (
         <section className='body'>
             <Experience />

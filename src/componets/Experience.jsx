@@ -5,36 +5,7 @@ import timelineElements from '../TimelineElement';
 const Experience = () => {
     const [visibleElements, setVisibleElements] = useState([]);
     const elementRefs = useRef([]);
-
-    useEffect(() => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: .8,
-        };
-
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                const id = entry.target.getAttribute('data-id');
-                if (entry.isIntersecting) {
-                    setVisibleElements((prev) => [...new Set([...prev, id])]);
-                } else {
-                    setVisibleElements((prev) => prev.filter((item) => item !== id));
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, observerOptions);
-
-        elementRefs.current.forEach((ref) => {
-            if (ref) observer.observe(ref);
-        });
-
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-
+    
     return (
         <section id='experience' className="timeline">
             <div className='timeline__container'>

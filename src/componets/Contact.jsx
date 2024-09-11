@@ -1,10 +1,11 @@
-import React from 'react';
+
 import Swal from 'sweetalert2'
 import ContactPhone from '../svg/ContactPhone';
 import ContactGit from '../svg/ContactGit';
 import ContactLinkedin from '../svg/ContactLinked';
 
 const Contact = () => {
+
 
     const onSubmit = async (event) => {
         event.preventDefault();

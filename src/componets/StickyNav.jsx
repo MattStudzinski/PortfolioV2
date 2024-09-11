@@ -1,33 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 
 
 const StickyNav = ({ show }) => {
     const [activeLink, setActiveLink] = useState('')
-    const sectionsRef = useRef({})
-
-    useEffect(() => {
-        const sectionElements = Object.values(sectionsRef.current)
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    console.log(`Intersecting section: ${entry.target.id}`)
-                    setActiveLink(entry.target.id)
-                }
-            })
-        }, {threshold: 0.5})
-
-        sectionElements.forEach((section) => {
-            if (section) observer.observe(section)
-        })
-
-    return () => {
-        sectionElements.forEach((section) => {
-            if (section) observer.unobserve(section)
-        })
-    }
-    }, [])
+    
 
     
     const handleClick = (id) => {

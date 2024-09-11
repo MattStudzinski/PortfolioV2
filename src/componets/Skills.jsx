@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useInView } from 'react-intersection-observer';
 import CssLogo from '../svg/CssLogo';
 import MongoLogo from '../svg/Mongodb';
@@ -17,6 +17,7 @@ import {Tilt} from 'react-tilt'
 
 
 const Skills = () => {
+
     const [ref1, inView1] = useInView({ threshold: 1, triggerOnce: true });
     const [ref2, inView2] = useInView({ threshold: 1, triggerOnce: true });
     const [ref3, inView3] = useInView({ threshold: 1, triggerOnce: true });
@@ -33,7 +34,7 @@ const Skills = () => {
 
 
     return (
-        <section id="skills" className='skills'>
+        <section id="skills"  className='skills'>
         <div className='skills__container'>
             <div className='skills__item-container'>
                 <div className='skills__main-skills'>
