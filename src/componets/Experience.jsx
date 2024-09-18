@@ -54,7 +54,11 @@ const Experience = () => {
                         <h3 className="timeline__title">{element.title}</h3>
                         <h4 className="timeline__subtitle">{element.location}</h4>
                         </div>
-                        <p className='timeline__description'>{element.description}</p>
+                        <ul className='timeline__description'>
+        {element.description.map((item, descIndex) => (
+            <li className='timeline__description-LI' key={descIndex}>{item}</li>
+        ))}
+    </ul>
                         
                     </div>
                 </div>
