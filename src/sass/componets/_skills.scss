@@ -138,12 +138,32 @@ border: 1px solid $primary;
 
 .skills {
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 12rem 0 0 0;
     align-items: flex-start;
     justify-content: center;
     height: 80rem;
     
+    &__section-title {
+        font-size: 4rem;
+    align-self: flex-start;
+    margin-left: 9%;
+    position: relative;
+    margin-top: 4rem;
+    color: $text;
+    margin-bottom: 9rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -80%; 
+        left: 0; 
+        bottom: 0; 
+        height: 1px; 
+        background-color: $primary;
+    }
+    }
 
     &__container {
         display: flex;

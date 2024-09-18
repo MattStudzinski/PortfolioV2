@@ -65,6 +65,7 @@
 
             .projects__image {
                 width: 40%;
+                min-width: 36.6rem;
         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
         transition: clip-path 0.3s ease;
 

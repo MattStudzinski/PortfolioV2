@@ -1,6 +1,15 @@
 @import "abstracts/variables";
 @import "componets/experience";
-
+@import "componets/about";
+@import "componets/body";
+@import "componets/contact";
+@import "componets/footer";
+@import "componets/header";
+@import "componets/hero";
+@import "componets/navbar";
+@import "componets/projects";
+@import "componets/skills";
+@import "componets/stickeynav";
 
 @keyframes animStar {
   from {
@@ -850,133 +859,7 @@ html {
     padding: 0.4rem;
   }
 }
-.skills {
-  display: flex;
-  width: 100%;
-  padding: 12rem 0 0 0;
-  align-items: flex-start;
-  justify-content: center;
-  height: 80rem;
-}
 
-.skills__container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 590px) {
-  .skills__container {
-    max-width: 41rem;
-  }
-}
-.skills__item-container {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-}
-
-.skills__main-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.skills__secondary-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.skills__aux-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.skills__icon-small {
-  width: 5rem;
-  height: 5rem;
-}
-
-.skills__icon-medium {
-  width: 8rem;
-  height: 8rem;
-}
-
-.skills__icon-large {
-  width: 11rem;
-  height: 11rem;
-}
-
-.skills__title {
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
-  color: white;
-}
-
-@media (max-width: 720px) {
-  .skills__title {
-    font-size: 1rem;
-  }
-}
-.skills .skills__item {
-  opacity: 0;
-}
-
-.skills .skills__item--inView {
-  animation: slideInLeft 0.8s ease-out forwards;
-  position: relative;
-}
-
-.skills .skills__item--1.skills__item--inView {
-  animation-delay: 0.7s;
-}
-
-.skills .skills__item--2.skills__item--inView {
-  animation-delay: 0.5s;
-}
-
-.skills .skills__item--3.skills__item--inView {
-  animation-delay: 0.3s;
-}
-
-.skills .skills__item--4.skills__item--inView {
-  animation-delay: 0.1s;
-}
-
-.skills .skills__item--5.skills__item--inView {
-  animation-delay: 1.9s;
-}
-
-.skills .skills__item--6.skills__item--inView {
-  animation-delay: 1.7s;
-}
-
-.skills .skills__item--7.skills__item--inView {
-  animation-delay: 1.5s;
-}
-
-.skills .skills__item--8.skills__item--inView {
-  animation-delay: 1.3s;
-}
-
-.skills .skills__item--9.skills__item--inView {
-  animation-delay: 1.1s;
-}
-
-.skills .skills__item--10.skills__item--inView {
-  animation-delay: 2.7s;
-}
-
-.skills .skills__item--11.skills__item--inView {
-  animation-delay: 2.5s;
-}
-
-.skills .skills__item--12.skills__item--inView {
-  animation-delay: 2.3s;
-}
 
 .contact {
   display: flex;
