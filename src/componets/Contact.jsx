@@ -47,6 +47,7 @@ const Contact = () => {
 
       return (
         <section id='contact' className='contact'>
+          <h1 className='contact__section-title'>Contact</h1>
             <div className='contact__container'>
                 <div className='contact__image-container'>
                     <h1 className='contact__title'>Let's Collaborate!</h1>

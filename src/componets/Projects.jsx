@@ -38,6 +38,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className='projects'>
+            <h1 className='projects__section-title'>Projects</h1>
 
             
             <div className='projects__card-container'>
