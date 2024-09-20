@@ -64,8 +64,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='https://github.com/MattStudzinski' className='projects__live-button'>View Deployed</a>
-                        <a href='https://github.com/MattStudzinski' className='projects__code-button'>Github</a>
+                        <a href='https://tasksync-optum.netlify.app/' className='projects__live-button' target="_blank" rel="noopener noreferrer">View Deployed</a>
+                        <a href='https://github.com/MattStudzinski/TaskSync' className='projects__code-button' target="_blank" rel="noopener noreferrer">Github</a>
                     </div>
                     </div>
                     
@@ -78,7 +78,7 @@ const Projects = () => {
                     <div className='projects__info-container'>
                         <div className='projects__body-container'>
                         <div className='projects__header-container'>
-                    <h1 className='projects__title'>Task Trove</h1>
+                    <h1 className='projects__title'>Inventory Turner</h1>
                         
                     
                     <ul className='projects__tech-stack'>
@@ -92,8 +92,8 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='https://github.com/MattStudzinski' className='projects__live-button'>View Deployed</a>
-                        <a href='https://github.com/MattStudzinski' className='projects__code-button'>Github</a>
+                        <a href='https://mmturnover-control.com/' className='projects__live-button' target="_blank" rel="noopener noreferrer">View Deployed</a>
+                        <a href='https://github.com/MattStudzinski/inventory-turns' className='projects__code-button' target="_blank" rel="noopener noreferrer">Github</a>
                     </div>
                     </div>
                     
