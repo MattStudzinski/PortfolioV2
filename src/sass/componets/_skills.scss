@@ -46,6 +46,13 @@ border: 1px solid $primary;
         padding: .4rem;
         
     }
+
+    @media (max-width: 590px) {
+        width: 8rem;
+        height: 10rem;
+        margin: .4rem;
+        padding: .4rem;
+    }
 }
 .svg-container-medium {
     animation: float2 3s ease-in-out infinite;
@@ -132,6 +139,12 @@ border: 1px solid $primary;
         margin: .4rem;
         padding: .4rem;
     }
+    @media (max-width: 590px) {
+        width: 8rem;
+        height: 10rem;
+        margin: .4rem;
+        padding: .4rem;
+    }
 }
 
 
@@ -152,16 +165,22 @@ border: 1px solid $primary;
     position: relative;
     margin-top: 4rem;
     color: $text;
+    width: 28rem;
     
 
     &::after {
         content: '';
         position: absolute;
+        width: 100%;
         right: -80%; 
         left: 0; 
         bottom: 0; 
         height: 1px; 
         background-color: $primary;
+    }
+
+    @media (max-width: 720px) {
+        font-size: 3rem;
     }
     }
 
@@ -173,6 +192,7 @@ border: 1px solid $primary;
 
         @media (max-width: 590px) {
             max-width: 41rem;
+            align-self: center;
         }
     }
 
@@ -180,6 +200,10 @@ border: 1px solid $primary;
         display: flex;
         flex-direction: column;
         width: 75%;
+
+        @media (max-width: 590px) {
+            flex-direction: row-reverse;
+        }
     }
 
     &__main-skills {
@@ -271,7 +295,7 @@ border: 1px solid $primary;
     }
     
     .skills__item--8.skills__item--inView {
-        animation-delay: 1.3s;
+        animation-delay: 2.9s;
     }
     
     .skills__item--9.skills__item--inView {

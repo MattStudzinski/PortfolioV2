@@ -60,7 +60,7 @@ const Projects = () => {
                     </ul>
                     </div>
                     <h3 className='projects__subtitle'>Issue tracking application</h3>
-                    <div className='projects__description'>This is where the project description goes, lets keep it to a few lines and i am going to type out a few lines here to act as an example for future descriptions so lets be careful about how much we share!</div>
+                    <div className='projects__description'>Developed a robust issue tracker for drivers and warehouse staff, featuring JWT authentication and role-based access. Implemented cron-enabled workflows and a calendar for efficient task management, along with dynamic filters for refined tracking.</div>
                     </div>
 
                     <div className='projects__button-container'>
@@ -88,7 +88,7 @@ const Projects = () => {
                     </ul>
                     </div>
                     <h3 className='projects__subtitle'>Issue tracking application</h3>
-                    <div className='projects__description'>This is where the project description goes, lets keep it to a few lines and i am going to type out a few lines here to act as an example for future descriptions so lets be careful about how much we share!</div>
+                    <div className='projects__description'>Created a software solution to optimize warehouse inventory by processing Excel data into JSON and analyzing item usage rates. Automated daily sorting of datasets to flag items for removal or monitoring based on usage frequency, while tracking warehouse activity for historical insights.</div>
                     </div>
 
                     <div className='projects__button-container'>

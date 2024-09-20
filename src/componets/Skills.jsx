@@ -40,22 +40,22 @@ const Skills = () => {
             <div className='skills__item-container'>
                 <div className='skills__main-skills'>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref1} className={`skills__item-large skills__item ${inView1 ? 'skills__item--1 skills__item--inView' : ''}`}>
+                    <div ref={ref1} className={`skills__item-large skills__item ${inView1 ? 'skills__item--1 skills__item--inView' : ''}`} style={{ gridColumn: '1', gridRow: '1' }}>
                         <MongoLogo />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref2} className={`skills__item-large skills__item ${inView2 ? 'skills__item--2 skills__item--inView' : ''}`}>
+                    <div ref={ref2} className={`skills__item-large skills__item ${inView2 ? 'skills__item--2 skills__item--inView' : ''}`} style={{ gridColumn: '2', gridRow: '1' }}>
                         <ReactLogo />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref3} className={`skills__item-large skills__item ${inView3 ? 'skills__item--3 skills__item--inView' : ''}`}>
+                    <div ref={ref3} className={`skills__item-large skills__item ${inView3 ? 'skills__item--3 skills__item--inView' : ''}`} style={{ gridColumn: '3', gridRow: '1' }}>
                         <ExpressLogo />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref4} className={`skills__item-large skills__item ${inView4 ? 'skills__item--4 skills__item--inView' : ''}`}>
+                    <div ref={ref4} className={`skills__item-large skills__item ${inView4 ? 'skills__item--4 skills__item--inView' : ''}`} style={{ gridColumn: '1', gridRow: '2' }}>
                         <NodeLogo />
                     </div>
                 </Tilt>
@@ -63,23 +63,18 @@ const Skills = () => {
             
                 <div className='skills__secondary-skills'>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref5} className={`skills__item-med skills__item ${inView5 ? 'skills__item--5 skills__item--inView' : ''}`}>
+                    <div ref={ref5} className={`skills__item-med skills__item ${inView5 ? 'skills__item--5 skills__item--inView' : ''}`} style={{ gridColumn: '2', gridRow: '3' }}>
                         <Javascript />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref6} className={`skills__item-med skills__item ${inView6 ? 'skills__item--6 skills__item--inView' : ''}`}>
+                    <div ref={ref6} className={`skills__item-med skills__item ${inView6 ? 'skills__item--6 skills__item--inView' : ''}`} style={{ gridColumn: '3', gridRow: '1' }}>
                         <CssLogo />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
                     <div ref={ref7} className={`skills__item-med skills__item ${inView7 ? 'skills__item--7 skills__item--inView' : ''}`}>
                         <Sass />
-                    </div>
-                </Tilt>
-                <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
-                    <div ref={ref8} className={`skills__item-med skills__item ${inView8 ? 'skills__item--8 skills__item--inView' : ''}`}>
-                        <JwtLogo />
                     </div>
                 </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
@@ -90,6 +85,11 @@ const Skills = () => {
                 </div>
                 
                 <div className='skills__aux-skills'>
+                <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
+                    <div ref={ref8} className={`skills__item-small skills__item ${inView8 ? 'skills__item--8 skills__item--inView' : ''}`}>
+                        <JwtLogo />
+                    </div>
+                </Tilt>
                 <Tilt className="Tilt" options= {{ max: 50, scale: 1.03}}>
                     <div ref={ref10} className={`skills__item-small skills__item ${inView10 ? 'skills__item--10 skills__item--inView' : ''}`}>
                         <PythonLogo />

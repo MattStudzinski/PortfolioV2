@@ -13,15 +13,21 @@
     position: relative;
     margin-top: 4rem;
     color: $text;
+    width: 28rem;
 
     &::after {
         content: '';
         position: absolute;
         right: -80%; 
+        width: 100%;
         left: 0; 
         bottom: 0; 
         height: 1px; 
         background-color: $primary;
+    }
+
+    @media (max-width: 720px) {
+        font-size: 3rem;
     }
     }
 
