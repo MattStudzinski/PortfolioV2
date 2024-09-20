@@ -918,6 +918,7 @@
 @media (max-width: 1000px) {
   .projects__tech-stack {
     margin-left: 0px;
+    width: 80%;
   }
 }
 .projects__tech {
