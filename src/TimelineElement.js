@@ -7,7 +7,7 @@ let timelineElements = [
         "Built and deployed a web-based issue tracker for warehouse and driver staff, featuring cron-enabled timed events, calendar functionality, and customizable filters for tracking issues by date and priority.",
         "Developed an app to monitor physical stock levels in warehouse, comparing usage against max levels to optimize inventory and prevent waste, saving tens of thousands of dollars annually."
     ],
-        date: "March 2024 - Present"
+        date: "March 2023 - Present"
     },
     {
         id:2,
@@ -17,7 +17,7 @@ let timelineElements = [
         "Led Smartsheet Development Projects for the Pacific West region, managing procurement issue tracking systems across 300+ clinical sites, as well as coordinating medical lab coat ordering and recall form submissions.", 
         "Redesigned and maintained SharePoint sites for three departments, improving user experience and aligning content with organizational changes."
         ],
-        date: "January 2024 - Present"
+        date: "March 2023 - Present"
     },
     
     {
