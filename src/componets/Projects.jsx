@@ -64,7 +64,7 @@ const Projects = () => {
                     </div>
 
                     <div className='projects__button-container'>
-                        <a href='https://tasksync-optum.netlify.app/' className='projects__live-button' target="_blank" rel="noopener noreferrer">View Deployed</a>
+                        <a href='https://tasksyncdemo.netlify.app/' className='projects__live-button' target="_blank" rel="noopener noreferrer">View Deployed</a>
                         <a href='https://github.com/MattStudzinski/TaskSync' className='projects__code-button' target="_blank" rel="noopener noreferrer">Github</a>
                     </div>
                     </div>
